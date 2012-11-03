@@ -1,0 +1,817 @@
+  id: 1
+  title: It's alive!!!
+  body: |-
+    <p><img src="http://s3.amazonaws.com/brentmc79-prod/files/1/medium.jpg?1238802534" alt="Photo_97.jpg" width="300" height="225" /></p>
+    <p>So here it is...&nbsp; The latest incarnation of my blog.</p>
+    <p>Not only does it look different, but it also resides at a different url.&nbsp; Eventually, I'll move all the content over from acts-as-blogr, and maybe even from brentcollier.com too.</p>
+    <p>Go ahead, click around.&nbsp; Check out the links up top.&nbsp; It's nice to finally consolidate all of my internet presences into one place.&nbsp; Well, it's not all here yet, but it's getting there...</p>
+  slug: its-alive
+  created_at: 2009-04-03 23:53:02
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description:
+-
+  id: 2
+  title: YARGP - Yet another Rails Gmail post
+  body: |-
+    <p><img style="float: left;padding-right:10px;padding-bottom:10px" src="http://s3.amazonaws.com/brentmc79-prod/files/2/medium.jpg?1238984431" alt="google-apps-logo.jpg" width="200" height="130" />Want to use Gmail, or a Google Apps account, with your Rails app?&nbsp; Well, it's gotten even easier than before.</p>
+    <p>The last time I set up and app to use Gmail's smtp, I had to use a plugin called <a href="http://github.com/openrain/action_mailer_tls/tree/v1.1.2" target="_blank">ActionMailerTLS</a>.&nbsp; Well, not any more.&nbsp; Ever since Rails 2.2.2, the tls functionality is built right in, but there's a catch.</p>
+    <p>While setting up notifications for this app, it took me a few minutes to realize what the problem was.&nbsp; This app is running on Rails 2.2.2, but the emails were not being sent out.&nbsp; WTF?&nbsp; I went back through all of the write-ups I had and seen and finally caught it.</p>
+    <p>It only works if you're running Ruby version 1.8.7, not 1.8.6.</p>
+    <p>Fortunately my Dreamhost shared hosting already had 1.8.7 installed, so notifications are working perfectly.&nbsp; So leave me a comment, and I'll be notified!</p>
+  slug: yet-another-rails-gmail-post
+  created_at: 2009-04-06 02:52:45
+  updated_at: 2009-05-04 04:06:16
+  published: 1
+  keywords: 
+  description: Want to use Gmail, or a Google Apps account, with your Rails app?? Well, it's
+-
+  id: 3
+  title: a little search engine optimization never hurt anyone
+  body: |-
+    <p>After continually receiving lame page-rankings on my previous blog attempt, I thought this time that I might spend a little more time to get a bit of my content into Google search results.&nbsp; I've never really messed with SEO before, so this is a bit of a first for me.</p>
+    <p>Off the bat, I only really knew (thought I knew) of two ways to help increase page rank:</p>
+    <ol>
+    <li>meta keywords</li>
+    <li>meta descriptions</li>
+    </ol>
+    <p>Turns out I was wrong.&nbsp; These days, the keywords don't really help all that much, and the description -- that's just used to display a little snippet of your content in the search results.&nbsp; Despite their near-uselessness, I still implemented them anyway.&nbsp; ;)</p>
+    <p>What my Googling did recommend was this:</p>
+    <ol>
+    <li>descriptive page titles</li>
+    <li>canonical url tags</li>
+    <li>submitting a site map</li>
+    </ol>
+    <p>So I updated the post view to display the post title in the page title -- nothing too ground-breaking there.&nbsp; I'm still up in the air about the canonical url tags since I know there's only one possible url to reach any of the content on this site, although I still may implement that later.</p>
+    <p>For the site map, I took a look at Google's Webmaster Tools which informed me that I could submit an RSS link ass my site map.&nbsp; This led me to implement an RSS feed, which I hadn't yet done.&nbsp; Within an hour of submitting the link, Google had index the whopping two posts that I had created.&nbsp; Now I just need to migrate the content from my previous blog.</p>
+    <p>So hopefully all of that will be enough to get me a few more page views from people that aren't my friends or coworkers.</p>
+  slug: a-little-seo-never-hurt
+  created_at: 2009-04-07 04:20:34
+  updated_at: 2009-05-04 04:05:44
+  published: 1
+  keywords: 
+  description: After continually receiving lame page-rankings on my previous blog attempt, I thought this time that I might spend a little more time to get a bit of m
+-
+  id: 4
+  title: thin is in...   maybe?
+  body: <p>I just ran across <a href="http://www.danielfischer.com/2008/01/04/imagine-a-webserver-faster-than-mongrel-oh-i-know-thin/" target="_blank" title="Thin">this</a> blog post about a new Rails web server called <a href="http://code.macournoyer.com/thin/" target="_blank" title="Thin homepage">Thin</a>.&nbsp; It&#39;s supposed to be Mongrel, but better (ie faster).&nbsp; It&#39;s still only in an experimental stage, but let&#39;s hope it turns out to be as good as they claim...</p><p><img src="http://chart.apis.google.com/chart?cht=bvg&amp;chd=t:14.98,54.8723076923077,48.9184615384615,79.9276923076923|14.8692307692308,65.0615384615385,70.4446153846154,89.5553846153846|14.9476923076923,35.1123076923077,70.18,88.6769230769231&amp;chbh=16&amp;chs=350x150&amp;chl=WEBrick|Mongrel|Evented%20M.|Thin&amp;chco=000000,666666,cccccc&amp;chdl=1%20c%20req.|10%20c%20req.|100%20c%20req." alt="Thin graph" title="Thin graph" width="350" height="150" />&nbsp;</p>
+  slug: thin-is-in-maybe
+  created_at: 2008-01-06 08:09:05
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: I just ran across this [http://www.danielfischer.com/2008/01/04/imagine-a-webserver-faster-than-mongrel-oh-i-know-thin/] blog post about a new Rails we
+-
+  id: 5
+  title: my first hiccup
+  body: |-
+    <p>So I mentioned earlier that I was using Capistrano 2.0.&nbsp; Well, in actuality, I was using version 2.3.0.&nbsp; Why's this important?&nbsp; Well, I'll tell ya....</p>
+    <p>On my initial deploy:</p>
+    <pre class="terminal">cap deploy:cold</pre>
+    <p>...everything went fine.&nbsp; Capistrano did a clone of my Github repo, ran all of my migrations, and started up the mongrels without a hitch.&nbsp; It was on my subsequent deploy that I had a problem.</p>
+    <pre class="terminal">macbook:blog brent$ cap deploy<br />&nbsp; * executing `deploy'<br />&nbsp; * executing `deploy:update'<br />&nbsp;** transaction: start<br />&nbsp; * executing `deploy:update_code'<br />&nbsp;&nbsp;&nbsp; updating the cached checkout on all servers<br />ssh_exchange_identification: Connection closed by remote host<br />fatal: The remote end hung up unexpectedly<br />*** [deploy:update_code] rolling back<br />&nbsp; * executing "rm -rf /home/brent/public_html/acts-as-blogr.com/releases/20080604051355; true"<br />&nbsp;&nbsp;&nbsp; servers: ["acts-as-blogr.com"]<br />&nbsp;&nbsp;&nbsp; [acts-as-blogr.com] executing command<br />&nbsp;&nbsp;&nbsp; command finished<br />/Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/recipes/deploy/scm/git.rb:217:in `query_revision': Unable to resolve revision for master (RuntimeError)<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/recipes/deploy/scm/base.rb:35:in `send'<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/recipes/deploy/scm/base.rb:35:in `method_missing'<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/recipes/deploy/scm/base.rb:63:in `local'<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/recipes/deploy/scm/base.rb:35:in `method_missing'<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/recipes/deploy.rb:37:in `load'<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/configuration/variables.rb:87:in `call'<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/configuration/variables.rb:87:in `fetch'<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/configuration/variables.rb:110:in `protect'<br />&nbsp;&nbsp;&nbsp; &nbsp;... 35 levels...<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/lib/capistrano/cli/execute.rb:14:in `execute'<br />&nbsp;&nbsp;&nbsp; from /Library/Ruby/Gems/1.8/gems/capistrano-2.3.0/bin/cap:4<br />&nbsp;&nbsp;&nbsp; from /usr/bin/cap:19:in `load'<br />&nbsp;&nbsp;&nbsp; from /usr/bin/cap:19</pre>
+    <p>I tried again and got the same results.&nbsp; After a quick google or two, I found <a title="Capistrano Lighthouse bug ticket" href="http://capistrano.lighthouseapp.com/projects/8716/tickets/12-deployment-via-github-fails-since-2-3-0" target="_blank">this Lighthouse ticket</a> for Capistrano. Evidently there's an issue with cap version 2.3.0 in which it calls 'fetch --tags' to update your code, which returns only tag commits instead of all commits.&nbsp; This is a problem.</p>
+    <p>Fortunately, the solution is a simple as either downgrading to version 2.2.0, or upgrading to the latest build.&nbsp; I opted for the safe route and installed 2.2.0.&nbsp; Now everything is right as rain.&nbsp;</p>
+  slug: my-first-hiccup
+  created_at: 2008-06-04 05:40:33
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: |-
+    So I mentioned earlier that I was using Capistrano 2.0.? Well, in actuality, I was using version 2.3.0.? Why's this important?? Well, I'll tell ya....
+    
+-
+  id: 6
+  title: Ajax image uploads with attachment_fu + s3
+  body: <p>I started off following <a href="%20mongrel_rails%20start%20-d%20-e%20production%20-p%208010%20-P%20log/mongrel8010.pid" target="_blank" title="Mike Clark&#39;s blog post on attachment_fu and s3">this</a> post about file uploads using attachment_fu and Amazon&#39;s S3 by Mike Clark.&nbsp; Before I could start on the image uploads, I needed an image processor, so I chose to go with <a href="http://seattlerb.rubyforge.org/ImageScience.html" target="_blank" title="ImageScience homepage">ImageScience</a>.&nbsp; Their directions for installing one of the prerequisites, FreeImage via MacPorts didn&#39;t exactly work for me, so I ended up building it from source as seen in <a href="http://www.carmelyne.com/2007/7/27/freeimage-on-my-slice" target="_blank" title="FreeImage how-to">this</a> post.</p><p>Once ImageScience was all set up, I followed the rest of Mike&#39;s write-up.&nbsp; After a few minutes I had image uploads up and running, but they were still being saved to the file system.&nbsp; The only thing left was to tie in Amazon&#39;s S3 web service, which is really easy.&nbsp; I installed the gem, edited the s3 yaml with my info, and updated my model to specify s3 as my storage option.&nbsp; The bummer came when I tested it out.&nbsp; I kept getting &quot;Access Denied&quot; errors.&nbsp; I checked and double-check my s3 keys.&nbsp; Everything was right, and I couldn&#39;t figure out what was going on.&nbsp; I thougth maybe I should try testing my s3 account another way, so I installed the s3 extension for Firefox.&nbsp; I was able to upload file using the same key I had specified in my app.&nbsp; Then it occurred to me, maybe I needed to create the bucket before I could use it... &nbsp; Duh!</p><p>I had been using the default bucket name &quot;appname-bucket&quot;, and since s3 bucket names have to be totally unique, this was causing my problem.&nbsp; I&#39;m sure someone else like myselft, who was too lazy to change the bucket name, had already claimed that name.&nbsp; So, I changed the bucket name in the yaml and created the bucket in Firefox, and Viola!&nbsp; It worked!</p><p>There was only one problem.&nbsp; My image upload form is on the post-creation page, which looks like this:<br />&nbsp;<img src="http://s3.amazonaws.com:/actsasblogr-production/images/17/Picture_1_big.png" border="1" alt="post-creation page" title="post-creation page" width="500" height="449" /></p><p>&nbsp;I needed the image uploads to be ajaxified, in case you wanted to upload an image while you were in the middle of writing a post.&nbsp; I remembered encountering this issue back when Brendan and I were working on Yappd.&nbsp; After a quick google search, I found <a href="http://khamsouk.souvanlasy.com/2007/5/1/ajax-file-uploads-in-rails-using-attachment_fu-and-responds_to_parent" target="_blank" title="ajax file uploads">this</a> post by Khamsouk Souvanlasy that had exactly what I needed.&nbsp; I followed his how-to and with only a few modifications, I had everything working in no time.</p><p>So there you have it... &nbsp; Ajaxified image uploads via attachment_fu, aws-s3, imagescience, responds_to_parent, and a few lines of code. </p>
+  slug: ajax-image-uploads-with-attachmentfu-s3
+  created_at: 2008-01-14 06:44:54
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: I started off following this [%20mongrel_rails%20start%20-d%20-e%20production%20-p%208010%20-P%20log/mongrel8010.pid] post about file uploads using att
+-
+  id: 7
+  title: Attending my 2nd aws talk...
+  body: <p><img src="http://s3.amazonaws.com:/actsasblogr-production/images/21/0115081905_big.jpg" alt="Amazon Web Services talk" title="Amazon Web Services talk" width="500" height="375" /></p><p>Here&#39;s the view from my seat at the latest Amazon web services talk.</p><p>One of the things Mike Culver (the speaker) did was ask who had heard of AWS, and who was using it.&nbsp; Wheras at the last talk I attended I had heard of AWS, but this time I could actually say that I was using it also, thanks to S3 hosting my image uploads.&nbsp;</p>
+  slug: attending-my-2nd-aws-talk
+  created_at: 2008-01-16 00:15:02
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: |-
+    [img:http://s3.amazonaws.com:/actsasblogr-production/images/21/0115081905_big.jpg]
+    
+    Here's the view from my seat at the latest Amazon web services talk
+-
+  id: 8
+  title: Firefox address bar shorcut 
+  body: <p><img style="padding-right: 10px; padding-bottom: 10px" src="http://s3.amazonaws.com:/actsasblogr-production/images/25/applekey_medium.jpg" alt="Apple key" title="Apple key" width="188" height="250" align="left" />This is one of those little tidbits that I fee like I should&#39;ve known a long time ago, but for some reason I didn&#39;t.</p><p>When I initially made the switch from a PC to a Mac one of my more frequent gripes was that when I clicked on the address bar to enter a url, I would have to triple-click it to highlight whatever text was already in the address bar.&nbsp; This annoyed the crap out of me since on a PC the entire url is highlighted with only a single click.</p><p>Why was I having to click so much?&nbsp; I thought Macs were supposed to &quot;just work&quot;.</p><p>Well, I&#39;ve found a solution.&nbsp; If you already knew this, then please just bear with me.&nbsp; All you have to do is press APPLE + L and your cursor automatically jumps to the address bar and highlights the entire url, which helps you two-fold.&nbsp; Number one, you don&#39;t have to deal with any of this triple-clicking tom-foolery, and two, now you don&#39;t even have to lift your hand from the keyboard.</p><p>Amazing.&nbsp; It&#39;s the little things in life, you know? </p>
+  slug: firefox-address-bar-shorcut
+  created_at: 2008-01-17 07:11:31
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: [img:http://s3.amazonaws.com:/actsasblogr-production/images/25/applekey_medium.jpg]This is one of those little tidbits that I fee like I should've know
+-
+  id: 9
+  title: Social Matchbox DC
+  body: <p><img src="http://farm3.static.flickr.com/2135/2227229587_5132181d7f.jpg?v=0" alt="Brendan and I at Social Matchbox DC" title="Brendan and I at Social Matchbox DC" width="500" height="375" align="top" /><br />Brendan, Theo, and I at <a href="http://www.jobmatchbox.com/2008/01/02/social-matchbox-dc-event-on-january-28th/" target="_blank" title="Social Matchbox DC">Social Matchbox DC</a> the other night.&nbsp; <a href="http://www.flickr.com/photos/8811256@N03/sets/72157603816096103/" target="_blank" title="More Social Matchbox DC Pics.">More Pics</a>.</p><p>Initially we thought this was going to be a venue for local start-ups to talk about themselves and what they were up to.&nbsp; Unfortunately it turned out to be more like a job fair.&nbsp; One after another, company representatives briefly spoke about what their company was about and then proceded to rattle off a lits of positions that they were looking to hire for.</p><p>During the social segment of the evening, everybody I talked to that I didn&#39;t already know sounded more like a recruiter than a like-minded web entrepreneur.&nbsp; Despite opting for the &quot;Socializer&quot; name tag rather than the &quot;Job Seeker&quot; alternative, I begrudgingly accepted a handful of business cards from various people in need of web developer/software engineers.</p><p>Aside from the job fair atmosphere, it was good to hear about local IT-related businesses that were doing something besides government contracting.&nbsp; Also I was pleased to hear that a good portion of them were developing on a Rails stack.&nbsp; Oh, and there was free pizza.&nbsp; Thanks <a href="http://www.intridea.com" target="_blank" title="Intridea...  The guys who supplied the pizza.">Intridea</a>...&nbsp;</p>
+  slug: social-matchbox-dc
+  created_at: 2008-01-31 06:56:37
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: |-
+    [img:http://farm3.static.flickr.com/2135/2227229587_5132181d7f.jpg?v=0]
+    Brendan, Theo, and I at Social Matchbox DC [http://www.jobmatchbox.com/2008/01/
+-
+  id: 10
+  title: Capistrano and beyond...
+  body: <h2>Good...<br /></h2><p><img src="http://s3.amazonaws.com:/actsasblogr-production/images/41/capistrano_medium.png" alt="capistrano" title="capistrano" width="250" height="95" align="left" />If you don&#39;t know what <a href="http://www.capify.org/" target="_blank" title="Capistrano homepage">Capistrano</a> is, then you&#39;ve probably never deployed a Rails app.&nbsp; Formerly known as SwitchTower, Capistrano is a tool that takes the pain out of deploying a Rails app.</p><p>By simply typing &quot;cap deploy&quot;, Capistrano will grab your code from Subversion, push it up to your host, restart your server, and even run any necessary migrations.&nbsp; Ain&#39;t that slick?</p><h2>Better...&nbsp;</h2><p><img src="http://s3.amazonaws.com:/actsasblogr-production/images/33/webistrano_medium.png" alt="Webistrano" title="Webistrano" width="250" height="186" align="left" />Check out <a href="http://labs.peritor.com/webistrano" target="_blank" title="Webistrano homepage">Webistrano</a>. It&#39;s a UI for managing Capistrano deployments, which they claim wil help in dealing with multiple projects in multiple environments. </p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h2>Best?&nbsp; <br /></h2><p><img src="http://s3.amazonaws.com:/actsasblogr-production/images/37/vladTheDeployer_medium.png" alt="Vlad the deployer" title="Vlad the deployer" width="134" height="250" align="left" />Introducing Vlad the Impaler, uhh...&nbsp; I mean <a href="http://rubyhitsquad.com/Vlad_the_Deployer.html" target="_blank" title="Vlad the Deployer homepage">Vlad the Deployer</a>.&nbsp; No, its not a vampire, its the <a href="http://rubyhitsquad.com/Ruby_Hit_Squad.html" target="_blank" title="Ruby Hit Squad homepage">Ruby Hit Squad</a>&#39;s attempt at cleaning up the code and simplifying the use of Capistrano.</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+  slug: capistrano-and-beyond
+  created_at: 2008-02-15 00:28:55
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: |-
+    Good...
+    
+    [img:http://s3.amazonaws.com:/actsasblogr-production/images/41/capistrano_medium.png]If you don't know what Capistrano [http://www.capify.org/
+-
+  id: 11
+  title: I Can Has Productivity
+  body: <p><img src="http://s3.amazonaws.com/actsasblogr-production/images/45/0219081908_big.jpg" alt="0219081908_big" /></p><p>I attended a talk by <span class="truncateMe maxChars300"><a href="http://robsanheim.com/" target="_blank" title="Rob&#39;s homepage">Rob Sanheim</a>, a priciple at <a href="http://thinkrelevance.com/" target="_blank" title="ThinkRelevance homepage">ThinkRelevance</a>, on productivity entitled &quot;I Can Has Productivity&quot;.</span></p><p>He talked about ways to increase your productivity like automation of repetitive tasks, meta-programming (something I need to spend some time on), pair-programming, and yak-shaving -- Nathaniel, the guy that runs these meetups, gave an explanation on what yak-shaving was, but I still didn&#39;t quite get it so I&#39;ll have to look it up...</p><p>Rob also talked about efficiency vs effectiveness, or in other words, doings things right vs doing the right things.</p><p>Something else he talked about, which is probably the hardest for me, is time management and how it can help you determine your time-wasters and find more time in the day.&nbsp; This is something we could all use, because who doesn&#39;t need more time?</p><p>He also recommended a few books, including &quot;The Pragmatic Programmer&quot;, which I&#39;ve read, &quot;The Effective Executive&quot;, and another gtd-related book from someone at <a href="http://37signals.com/" target="_blank" title="37signals homepage">37signals</a>.</p><p>Despite having already heard a lot of this from various other places, all in all this was still a pretty interesting talk, especially with the comment/questions from the group and the heavy use of LoLcats in his slides.</p>
+  slug: i-can-has-productivity
+  created_at: 2008-02-20 06:44:43
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: |-
+    [img:http://s3.amazonaws.com/actsasblogr-production/images/45/0219081908_big.jpg]
+    
+    I attended a talk by Rob Sanheim [http://robsanheim.com/], a pricipl
+-
+  id: 12
+  title: A little Fone-Fu...
+  body: |-
+    <p>I ran across this <a title="designbyblake on SMS Fu" href="http://www.designbyblake.com/archives/50" target="_blank">post</a> last night in which the writer was commenting on my friend <a title="Brendan's blog" href="http://brendanlim.com/" target="_blank">Brendan</a>'s text messaging plugin, <a title="Brendan's sms-fu plugin" href="http://brendanlim.com/2008/2/28/send-text-messages-from-rails-with-sms-fu" target="_blank">sms-fu</a>.&nbsp; He evidently had a problem with the typical plugin install method, so his workaround was basically to just move Brendan's code into his app. I was a little curious about this, so I thougt I'd give it a try...</p>
+    <p>First I created a new app to test with...</p>
+    <pre class="terminal">$ rails -d mysql smsapp</pre>
+    <p>Then I installed sms-fu...</p>
+    <pre class="terminal">$ script/plugin install http://sms-fu.googlecode.com/svn/trunk/sms_fu</pre>
+    <p>I generated a controller, model, and view...</p>
+    <pre class="terminal">$ script/generate scaffold sms number:string carrier:string message:string</pre>
+    <p>Then all I had to do was update the create method in the controller like this..</p>
+    <pre name="code" class="ruby">def create
+      sms = Sms.new(params[:sms])
+      deliver_sms sms.number, sms.carrier, sms.message
+      respond_to do |format|
+        if sms.save
+          flash[:notice] = 'Sms was successfully created.'
+        end
+      end
+    end
+    </pre>
+    <p>That was pretty much all I needed, except for one more thing.&nbsp; I need to actually be able to send the message, so I decided to use Gmail via the action_mailer_tls plugin that I found <a title="Use Gmail as your mail server for rails" href="http://www.danielfischer.com/2008/01/09/how-to-use-gmail-as-your-mail-server-for-rails/" target="_blank">here</a> on Daniel Fischer's blog.</p>
+    <p>Once I had the mail server setup, I fired up Mongrel, hit localhost:3000/sms/new, entered my info and viola!&nbsp; Next thing I know my phone is beeping and my Verizon bill just got 5 cents bigger...&nbsp;</p>
+  slug: a-little-fonefu
+  created_at: 2008-03-01 17:55:09
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: I ran across this post [http://www.designbyblake.com/archives/50] last night in which the writer was commenting on my friend Brendan [http://brendanlim
+-
+  id: 13
+  title: has_new :job
+  body: <p>It&#39;s true...</p><p>As of March 14th, I&#39;ll be done at <a href="http://www.kajeet.com" target="_blank" title="kajeet homepage">kajeet</a>.&nbsp; I&#39;ll be sad to go as I have kajeet to thank for many things in my life.&nbsp; As a stepping-stone in my career, they entrusted me with numerous responsibilities (sometime more than I wanted) which helped boost my confidence and abilities.&nbsp; They gave me my first exposure to the start-up lifestyle, of which I&#39;m definitely a fan.&nbsp; I made a bunch of create friends while I was there, one of whom I even started and sold a company with.</p><p>Unfortunately, I need to move on.&nbsp; I liked my job, but the DC Metro area is a very expensive place to live, and to top it all off, I recently found out that my wife is pregnant again.&nbsp; Given this news, there&#39;s just no way that I can afford to continue living in this area.</p><p>After a bit of searching, I managed to secure a position with <a href="http://www.near-time.net" target="_blank" title="Near-Time homepage">Near-Time</a> in Raleigh, North Carolina.&nbsp; I&#39;m really excited about this for several reasons.&nbsp; Number one, its in Raleigh (Durham actually).&nbsp; I&#39;ve been trying to make my way down to that area for several years now, and its finally going to happen.&nbsp; Number two, its a Rails developer postion, so I&#39;ll finally be transitioning over from Java to Rails.&nbsp; And number three, its another start-up.&nbsp; I&#39;ve come to the conclusion that I just don&#39;t fit in the typical corporate environment, and that my personality is just better suited for a start-up.</p><p>So, between moving, a new job, and a new baby, I&#39;ve got a lot going on right now. &nbsp; </p>
+  slug: has-new-job
+  created_at: 2008-03-12 17:57:24
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: |-
+    It's true...
+    
+    As of March 14th, I'll be done at kajeet [http://www.kajeet.com].? I'll be sad to go as I have kajeet to thank for many things in my life
+-
+  id: 14
+  title: Firefox 3 Beta 4
+  body: <p>If you&#39;re using a beta release of Firefox 3, the 4th beta version was just recently released.&nbsp; I&#39;ve been using the beta 3 version for a couple of weeks now and I&#39;ve been fairly happy with it, aside from a few little bugs here and there.&nbsp; I just noticed that the beta 4 version had been released, so I downloaded and installed it a couple of days ago.&nbsp; There were two immediately noticeable differences...<br /><br />First, beta 4 is blazing fast compared to beta 3.&nbsp; I use iGoogle as my homepage and it loads sooo much quicker with beta 4.<br /><br />Second, they added this jumbo back button, which you can see here...</p><p>&nbsp;<img src="http://s3.amazonaws.com/actsasblogr-production/images/53/Picture_3.png" alt="Picture_3" /></p><p>This is no bueno in my book.&nbsp; It causes the entire address bar to expand, wasting valueable space.&nbsp; Fortunately, I looked in the customize toolbar menu, and there&#39;s a checkbox for using small icons...</p><p>&nbsp;<img src="http://s3.amazonaws.com/actsasblogr-production/images/57/Picture_4_big.png" alt="Picture_4_big" /></p><p>Once checked, the jumbo back button reverts to a more acceptable size, like so...</p><p>&nbsp;<img src="http://s3.amazonaws.com/actsasblogr-production/images/61/Picture_5.png" alt="Picture_5" /></p><p>So, if you haven&#39;t already, go <a href="http://www.mozilla.com/en-US/firefox/all-beta.html" target="_blank" title="Firefox 3 Beta 4 download link">here</a> and download the latest beta release...&nbsp;</p>
+  slug: firefox-3-beta-4
+  created_at: 2008-03-13 04:45:21
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: If you're using a beta release of Firefox 3, the 4th beta version was just recently released.? I've been using the beta 3 version for a couple of weeks
+-
+  id: 15
+  title: Git really 'gits' around...
+  body: <p>I said &#39;gits&#39; instead of &#39;gets&#39;.&nbsp; Get it?&nbsp; Or should I say &#39;Git it&#39;?&nbsp; Ok, enough bad jokes...</p><p>If you&#39;re reading this, I&#39;m sure you&#39;re aware of Git.&nbsp; (Or you&#39;re a relative of mine, and you&#39;re still wondering what &#39;acts-as-blogr&#39; means...)&nbsp; If you&#39;re not, then climb out from under your rock, point your browser to the <a href="http://git.or.cz/" target="_blank" title="Git homepage">Git</a> homepage, and start reading</p><p>Git is the latest trend in <a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank" title="Wikipedia entry on &#39;Revision Control&#39;">version control</a>.&nbsp; All the cool(aid) kids are drinking it, I mean using it.&nbsp; Lately, it seems as though on every blog I read, and at every meet I attend, someone&#39;s preaching about Git.&nbsp; See my little psuedo-rant <a href="http://blog.notedpath.com/2008/03/16/google-techtalk-linus-torvalds-on-git/" target="_blank" title="Me ranting about Git...">here</a>.&nbsp; Since I&#39;m not usually an early adopter, I usually wait a little while before picking up some new (or recently popular) technology.&nbsp; Well, it looks like that time has come.</p><p>I started a new project last week and didn&#39;t like that my Subversion repo was on the same box as the app.&nbsp; If something were to happen to that machine, I&#39;d lose everything.&nbsp; I looked around at several SVN hosting sites, but nothing really tickled my fancy.&nbsp; I had a <a href="http://github.com" target="_blank" title="Github.com">Github</a> account which I hadn&#39;t taken advantage of yet, so I figured why not make the switch over to Git.</p><p>Funny thing was, just the day before I was bustin <a href="http://brendanlim.com/" target="_blank" title="Brendan&#39;s blog">Brendan</a>&#39;s balls for preaching about Git, telling him he was &#39;drinkin the kool-aid&#39;.&nbsp; To be honest though, I don&#39;t think anyone that does Rails development for a living can say anything about drinking the kool-aid.&nbsp; Hell, we&#39;re swimming in it...</p><p>So, I&#39;ve been using Git for a couple of days now and the transition hasn&#39;t been too painful.&nbsp; I had a few small issues, like where I couldn&#39;t push to the master repo due to some config issue, and when I had forgotten to setup my public key on Github.&nbsp; Aside from that, the only real trouble is getting used to the different terminology.</p><p>I definitely like the speed and ease in which you can create branches with Git.&nbsp; I attempt a lot of different things with my blog, most of which never get deployed, and its nice to be able to easily create a branch and experiment without worrying about hosing the code in Trunk.</p><p>Anyway, enough about me...</p><p><a href="http://www.heroku.com" target="_blank"><img src="http://s3.amazonaws.com/actsasblogr-production/images/65/Picture_2.png" alt="Picture_2" /></a></p><p>So, I noticed that <a href="http://www.heroku.com" target="_blank" title="Online RoR development, deployment, and hosting...">Heroku</a> has added Git integration.&nbsp; Check out the demo <a href="http://s3.amazonaws.com/heroku_screencasts/api_and_git.mov" target="_blank" title="Heroku Git screencast">here</a>.&nbsp; I&#39;ve played with Heroku for a while, and I must say that I really like it.&nbsp; I do very little development via their interface, but its really nice to have a way to quickly deploy an app and have it publicly available with virtually no hassle involved.&nbsp; Currently, Heroku acts as a staging server for a couple of personal projects that I&#39;m working on.&nbsp; If you haven&#39;t tried it out yet, you should definitely do so.</p><p><a href="http://www.lighthouseapp.com" target="_blank"><img src="http://s3.amazonaws.com/actsasblogr-production/images/69/Picture_3.png" alt="Picture_3" /></a> </p><p>There&#39;s also <a href="http://www.lighthouseapp.com" target="_blank" title="Lighthouse - project management and ticket tracking">Lighthouse</a>, a ticket-tracking and project management app written in Rails. While it doesn&#39;t currently support Git integration, from what I hear, they&#39;re planning to with the 2.0 release.&nbsp; I haven&#39;t used Lighthouse much yet, but I know of some projects that recently made the move from <a href="http://www.unfuddle.com" target="_blank" title="Project management with SVN hosting">Unfuddle</a> over to Lighthouse in anticipation of the Git integration.</p><p>It looks like Git is taking over, and for good reason.&nbsp; So, if you&#39;re like me and you have some aversion to jumping on the bandwagon, then get over yourself and go give it a try.&nbsp; You just might enjoy the ride... </p>
+  slug: git-really-gits-around
+  created_at: 2008-04-06 19:25:24
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: |-
+    I said 'gits' instead of 'gets'.? Get it?? Or should I say 'Git it'?? Ok, enough bad jokes...
+    
+    If you're reading this, I'm sure you're aware of Git.? (
+-
+  id: 16
+  title: Having trouble updating rails?
+  body: |-
+    <p>I was setting up the AAB dev environment on my macbook pro when I realized that I was only running Rails 2.0.2 but AAB wanted 2.1.0.&nbsp; Ehh...&nbsp; no big deal I thought.&nbsp; I opened up Terminal and typed...</p>
+    <pre>$ sudo gem update rails</pre>
+    <p>All the usual output scrolled by, indicating that everything went as expected.&nbsp; Once it was done I tried to check the rails version and that's when I realized that there was a problem</p>
+    <pre class="terminal">$ rails -v<br />/Library/Ruby/Site/1.8/rubygems.rb:377:in `report_activate_error':<br />RubyGem version error: activesupport(2.0.2 not = 2.1.0) (Gem::LoadError)<br />  from /Library/Ruby/Site/1.8/rubygems.rb:309:in `activate'<br />  from /Library/Ruby/Site/1.8/rubygems.rb:335:in `activate'<br />  from /Library/Ruby/Site/1.8/rubygems.rb:334:in `each'<br />  from /Library/Ruby/Site/1.8/rubygems.rb:334:in `activate'<br />  from /Library/Ruby/Site/1.8/rubygems.rb:76:in<br />`active_gem_with_options'<br />  from /Library/Ruby/Site/1.8/rubygems.rb:50:in `gem'<br />  from /Library/Ruby/bin/rails:15<br /></pre>
+    <p>So then I ran 'gem list' and saw what was up.</p>
+    <pre class="terminal">...<br />actionmailer (2.0.2, 1.3.6, 1.3.3, 1.2.5)<br />actionpack (2.0.2, 1.13.6, 1.13.3)<br />actionwebservice (1.2.6, 1.2.3, 1.1.6)<br />activemerchant (1.1.0)<br />activerecord (2.0.2, 1.15.6, 1.15.3)<br />activeresource (2.0.2)<br />activesupport (2.0.2, 1.4.4, 1.4.2)<br />...</pre>
+    <p>When I did the rails update, none of the rails dependencies were updated.&nbsp; I tried the update again, thinking that maybe something had just choked in the process, but it was no luck.&nbsp; A quick Google search yielded the solution of using update with the --source option and http://gems.rubyonrails.org as the URL.</p>
+    <pre class="terminal">$ sudo gem update --source http://gems.rubyonrails.org<br />Updating installed gems<br />Updating metadata for 13 gems from http://gems.rubyonrails.org/<br />.............<br />complete<br />Updating actionmailer<br />Updating metadata for 13 gems from http://gems.rubyonrails.org/<br />.............<br />complete<br />Successfully installed activesupport-2.1.0<br />Successfully installed actionpack-2.1.0<br />Successfully installed actionmailer-2.1.0<br />Updating activerecord<br />Successfully installed activesupport-2.1.0<br />Successfully installed actionpack-2.1.0<br />Successfully installed actionmailer-2.1.0<br />Successfully installed activerecord-2.1.0<br />Updating activeresource<br />Successfully installed activesupport-2.1.0<br />Successfully installed actionpack-2.1.0<br />Successfully installed actionmailer-2.1.0<br />Successfully installed activerecord-2.1.0<br />Successfully installed activeresource-2.1.0<br />Gems updated: activesupport, actionpack, actionmailer, activesupport, actionpack, actionmailer, activerecord, activesupport, actionpack, actionmailer, activerecord, activeresource</pre>
+    <p>That did it!  Now rails and all its dependencies are at 2.1.0.</p>
+  slug: having-trouble-updating-rails
+  created_at: 2008-06-18 04:13:48
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: I was setting up the AAB dev environment on my macbook pro when I realized that I was only running Rails 2.0.2 but AAB wanted 2.1.0.? Ehh...? no big de
+-
+  id: 17
+  title: Keeping the pace
+  body: <p>I&#39;m currently working on a fairly large rails app that&#39;s been in development for the past couple of years. In fact, when it first began I think Rails was only at version 1.1 or 1.2. </p><p>A lot&#39;s changed since then, both in Rails and the app.  I&#39;ve been doing Rails development for over a year now, but I&#39;m still far from an expert. I often find myself looking at a bit of code and wondering if it&#39;s some part of Rails (or ruby) that I&#39;m not familiar with, or if it&#39;s something specific to our app. We have a lot of custom framework code, and given the size and age of our app, it&#39;s not unlikely. </p><p>  Well, I found a case today in which it was both.  I was in the middle of replacing a bit of classic_pagination with will_paginate and I noticed that it kept choking on hash.except(keys). I thought this was a little odd since it was plugin code, which I was pretty sure we hadn&#39;t modified. After a little poking around, I found that the except method was defined in a Hash extension in the lib/ directory. There was no way that will_paginate was referring to a bit of our code!&nbsp; A quick Google search later, I found that ActiveSupport added the except method to Hash. Clearly one of two things had happened. Either we had implemented our own version of hash.except before it made it into Rails, or it had already been added to ActiveSupport, but we were just lagging behind on our Rails version.   </p><p>When working in a field where the tools change so rapidly, it&#39;s very important to keep up with any changes that are made. This is especially important when the development lifetime of an app spans multiple releases of a framework. </p>
+  slug: moving-at-a-rails-pace
+  created_at: 2008-08-12 02:22:23
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: I'm currently working on a fairly large rails app that's been in development for the past couple of years. In fact, when it first began I think Rails w
+-
+  id: 18
+  title: backgroundrb troubles
+  body: |-
+    <p>So I recently spent several days upgrading an outdated <a title="BackgrounDRb" href="http://backgroundrb.rubyforge.org/" target="_blank">backgroundrb</a> install to the latest version.&nbsp; The Backgroundrb documentation is a bit sparse, so needless to say, I quickly became an active member of the <a title="mailing list" href="http://rubyforge.org/mailman/listinfo/backgroundrb-devel" target="_blank">mailing list</a>.</p>
+    <p>Actually, to be honest, I didn't end up joining the mailing list until after I spent nearly an entire day pulling my hair out over a very strange bug.</p>
+    <p>Basically, I would create a new worker, send it some work to do, and then nothing would happen.&nbsp; The code looked something like this:</p>
+    <pre name="code" class="ruby">key = MiddleMan.new_worker(:worker =&gt; :prince_xml_worker, :worker_key =&gt; worker_key)
+    worker = MiddleMan.worker(:prince_xml_worker, key)
+    worker.async_build_pdf(:arg =&gt; html_string) 
+    </pre>
+    <p>(I was working on pdf generation in case you couldn't tell) </p>
+    <p>A little tailing of the background_debug log told me that I was requesting work on an invalid worker.&nbsp; An invalid worker?&nbsp; How could it not be valid?&nbsp; I just created the freakin thing.&nbsp; I thought maybe the key was wrong or something, so I added a debugger after the 'new_worker' line and tested it out.&nbsp; To my frustration, the generated key was perfectly valid, as was the worker retrieved from the middleman.</p>
+    <p>WTF?</p>
+    <p>I even managed to call the async worker method from the console and it worked perfectly.&nbsp; But anytime that I would remove the debugger and let it run its course, nothing would happen.&nbsp; It seemed ridiculous at first, but I thought maybe it just needs a second before its ready.&nbsp; Nah...&nbsp; That couldn't be it.&nbsp; Just for kicks I put in a half-second sleep call where the debugger was previously, like so:</p>
+    <pre name="code" class="ruby">key = MiddleMan.new_worker(:worker =&gt; :prince_xml_worker, :worker_key =&gt; worker_key)
+    worker = MiddleMan.worker(:prince_xml_worker, key)
+    sleep(0.5)
+    worker.async_build_pdf(:arg =&gt; html_string) 
+    </pre>
+    <p>...and it worker perfectly. &nbsp; </p>
+    <p>This just seemed crazy, so I got on the mailing list, described my problem and had a response within the hour.&nbsp; I couldn't believe it, but i was right.&nbsp; It said that if you're developing on OSX that backgroundrb basically needs a split second to start up the worker, before it can be used.&nbsp; Since only our development environments were OSX, I conditionally enabled the sleep command based on the RAILS_ENV.&nbsp; Unfortunately, our staging server, which is a Gentoo machine had the same problem, so I had to update the code accordinly.</p>
+    <p>ALSO...</p>
+    <p>Whatever you do, don't put 'puts' statements in your workers.&nbsp; I ran into the situation where my debugging of code was actually causing it to break, which wasted more time than I'd care to admit. </p>
+  slug: backgroundrb-troubles
+  created_at: 2008-09-16 04:41:41
+  updated_at: 2009-05-04 04:10:08
+  published: 1
+  keywords: 
+  description: So I recently spent several days upgrading an outdated backgroundrb [http://backgroundrb.rubyforge.org/] install to the latest version.? The Background
+-
+  id: 19
+  title: another rewrite
+  body: <p>So I&#39;ve got a problem...</p><p>I&#39;ve got a <a href="http://www.brentcollier.com" target="_blank" title="BrentCollier.com">wordpress blog</a>, this rails blog, a <a href="http://brentmc79.tumblr.com" target="_blank" title="I&#39;d Rather Be A Robot">tumble log</a>, a <a href="http://www.twitter.com/brentmc79" target="_blank" title="My Twitter feed">twitter feed</a>, and probably a few other blog/feed/things that I&#39;m forgetting. &nbsp; Aside from this blog, I post to the others fairly regularly.&nbsp; Granted, it&#39;s typically only an iphone photo with some blurb of text, but still...</p><p>Here&#39;s the issue.&nbsp; There&#39;s only a handful of people following this stuff (it&#39;s a shocker, I know) on a regular basis, so I can&#39;t really expect them to his 4 or 5 urls every time they want to see what&#39;s up with me.&nbsp; My &quot;followers&quot; consist primarily of family, friends, and coworkers.&nbsp; The family only checks the wordpress blog (and occassionally the tumble log) for pictures of the kids and my super-witty anecdotes.&nbsp; The friends and coworkers mostly follow my tumble log and more recently, my twitter feed, which I&#39;ve had for a while but didn&#39;t start using much till now.</p><p>Here&#39;s my solution.&nbsp; I want to bring it all together.&nbsp; Put it all in one place.&nbsp; When someone gets bored enough to look me up, I want them to get the whole picture with having to play a game of musical websites.&nbsp; This inspiration for this came from a <a href="http://www.toolmantim.com" target="_blank" title="ToolmanTim.com">blog</a> that I&#39;ve been loosely following for several months now.&nbsp; The blog combines both life and tech posts, but all the while maintaining the separation of the two. </p><p><img src="http://img.skitch.com/20081107-mtm4tmamx2x8htdhu2q2e5jq1g.jpg" alt="" width="434" height="273" align="middle" />&nbsp;</p><p>Notice also that he includes a link to his tumble log in the header nav.&nbsp; I&#39;d like to find a better way to incorporate Tumblr, but at this point, I&#39;m not sure how.&nbsp; The same goes for my Twitter feed. </p><p>Not only will this allow people to see everything in one place, but hopefully it will also encourage me to post tech content more often in order to keep up with the steady flow of family/life stuff.</p><p>So that&#39;s my plan.&nbsp; We&#39;ll see how long it takes me to get any of it done.&nbsp; For anyone interested in following the build, I&#39;ve already setup a Github repo <a href="http://github.com/brentmc79/myblog/tree/master" target="_blank" title="myblog git repo">here</a>. </p>
+  slug: another-rewrite
+  created_at: 2008-11-07 20:58:11
+  updated_at: 2009-04-22 05:13:39
+  published: 1
+  description: |-
+    So I've got a problem...
+    
+    I've got a wordpress blog [http://www.brentcollier.com], this rails blog, a tumble log [http://brentmc79.tumblr.com], a twitt
+-
+  id: 20
+  title: gem install mysql FAIL
+  body: |-
+    <p>This is nothing new or monumental, but I thought I'd post it anyway.&nbsp; I recently picked up a new <a title="My brand new Macbook Pro" href="http://media.tumblr.com/DHhoTI5QFfzh2pzwX6velMzjo1_500.jpg">Macbook Pro</a>, and while setting it up for Rails development, I ran into a little issue while installing the mysql gem.&nbsp; I'm sure this little tid-bit is probably posted a million other places on the intarwebs, but one more can't hurt.</p>
+    <p>So here's the problem.&nbsp; You attempt to run a rake db task, and you get this...</p>
+    <pre class="terminal">!!! The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql.<br />rake aborted!<br />no such file to load -- mysql</pre>
+    <p>So you do as it says and attempt to install the gem...</p>
+    <pre class="terminal">Building native extensions.&nbsp; This could take a while...<br />ERROR:&nbsp; Error installing mysql:<br />&nbsp;&nbsp;&nbsp; ERROR: Failed to build gem native extension.<br /><br />/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby extconf.rb install mysql<br />checking for mysql_query() in -lmysqlclient... no<br />checking for main() in -lm... yes<br />checking for mysql_query() in -lmysqlclient... no<br />checking for main() in -lz... yes<br />checking for mysql_query() in -lmysqlclient... no<br />checking for main() in -lsocket... no<br />checking for mysql_query() in -lmysqlclient... no<br />checking for main() in -lnsl... no<br />checking for mysql_query() in -lmysqlclient... no<br />*** extconf.rb failed ***<br />Could not create Makefile due to some reason, probably lack of<br />necessary libraries and/or headers.&nbsp; Check the mkmf.log file for more<br />details.&nbsp; You may need configuration options.<br /><br />Provided configuration options:<br />&nbsp;&nbsp;&nbsp; --with-opt-dir<br />&nbsp;&nbsp;&nbsp; --without-opt-dir<br />&nbsp;&nbsp;&nbsp; --with-opt-include<br />&nbsp;&nbsp;&nbsp; --without-opt-include=${opt-dir}/include<br />&nbsp;&nbsp;&nbsp; --with-opt-lib<br />&nbsp;&nbsp;&nbsp; --without-opt-lib=${opt-dir}/lib<br />&nbsp;&nbsp;&nbsp; --with-make-prog<br />&nbsp;&nbsp;&nbsp; --without-make-prog<br />&nbsp;&nbsp;&nbsp; --srcdir=.<br />&nbsp;&nbsp;&nbsp; --curdir<br />&nbsp;&nbsp;&nbsp; --ruby=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby<br />&nbsp;&nbsp;&nbsp; --with-mysql-config<br />&nbsp;&nbsp;&nbsp; --without-mysql-config<br />&nbsp;&nbsp;&nbsp; --with-mysql-dir<br />&nbsp;&nbsp;&nbsp; --without-mysql-dir<br />&nbsp;&nbsp;&nbsp; --with-mysql-include<br />&nbsp;&nbsp;&nbsp; --without-mysql-include=${mysql-dir}/include<br />&nbsp;&nbsp;&nbsp; --with-mysql-lib<br />&nbsp;&nbsp;&nbsp; --without-mysql-lib=${mysql-dir}/lib<br />&nbsp;&nbsp;&nbsp; --with-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --without-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --with-mlib<br />&nbsp;&nbsp;&nbsp; --without-mlib<br />&nbsp;&nbsp;&nbsp; --with-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --without-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --with-zlib<br />&nbsp;&nbsp;&nbsp; --without-zlib<br />&nbsp;&nbsp;&nbsp; --with-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --without-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --with-socketlib<br />&nbsp;&nbsp;&nbsp; --without-socketlib<br />&nbsp;&nbsp;&nbsp; --with-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --without-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --with-nsllib<br />&nbsp;&nbsp;&nbsp; --without-nsllib<br />&nbsp;&nbsp;&nbsp; --with-mysqlclientlib<br />&nbsp;&nbsp;&nbsp; --without-mysqlclientlib<br /><br /><br />Gem files will remain installed in /Library/Ruby/Gems/1.8/gems/mysql-2.7 for inspection.<br />Results logged to /Library/Ruby/Gems/1.8/gems/mysql-2.7/gem_make.out</pre>
+    <p>Well shit.&nbsp; That didn't work.&nbsp; So here's what you need to do...</p>
+    <pre class="terminal">sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config</pre>
+    <p>which should yield...</p>
+    <pre class="terminal">Building native extensions.&nbsp; This could take a while...<br />Successfully installed mysql-2.7<br />1 gem installed</pre>
+    <p>Yay. </p>
+  slug: gem-install-mysql-fail
+  created_at: 2008-11-09 05:51:43
+  updated_at: 2009-05-04 04:09:21
+  published: 1
+  keywords: 
+  description: This is nothing new or monumental, but I thought I'd post it anyway.? I recently picked up a new Macbook Pro [http://media.tumblr.com/DHhoTI5QFfzh2pzwX
+-
+  id: 21
+  title: Git status in your prompt
+  body: |-
+    <p>I've been using Git for almost a year now, but I didn't <em>really</em> start using Git until recently when I began working for <a title="Intridea - Agile Web Solutions" href="http://www.intridea.com" target="_blank">Intridea</a>.&nbsp; Once I started using Git on a daily basis, dealing with multiple projects, and multiple branches per project, I would occasionally make the mistake of changing code on the wrong branch.&nbsp; While annoying, it was easily fixed by stashing the changes and applying the stash to the proper branch.</p>
+    <p>As much as I love <a title="The 'git stash' documentation" href="http://www.kernel.org/pub/software/scm/git/docs/git-stash.html" target="_blank">git stash</a>, this began to get old, and constantly hitting up 'git status' to check the current branch wasn't cutting it.&nbsp; After a bit of googling, I found <a title="The Pug Automatic - Add Git branch status to your bash prompt" href="http://henrik.nyh.se/2008/12/git-dirty-prompt">this</a>.&nbsp; It describes how to add the current branch name and its clean/dirty status to you terminal prompt.</p>
+    <p>Just add this to your .bash_profile:&nbsp; </p>
+    <pre name="code" class="ruby">function parse_git_dirty {
+      [[ $(git status 2&gt; /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] &amp;&amp; echo "*"
+    }
+    function parse_git_branch {
+      git branch --no-color 2&gt; /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+    }
+    
+    export PS1='\u:\[\033[31;40m\]\w\[\033[0;33m\]$(parse_git_branch)\[\e[0m\]$ ' 
+    </pre>
+    <p>And you should end up with something that looks like this:</p>
+    <p><img title="My terminal prompt" src="http://farm4.static.flickr.com/3306/3203561777_94a8ba1462.jpg?v=0" alt="My terminal prompt" width="441" height="251" align="middle" /></p>
+    <p>As you can see, I like to use a bit of color to help things stand out.</p>
+    <p>So far this has been immensely helpful.&nbsp; With this info at a glance, I always know where I am and how I last left things. </p>
+  slug: git-status-in-your-prompt
+  created_at: 2009-01-17 18:29:22
+  updated_at: 2009-05-04 04:08:52
+  published: 1
+  keywords: 
+  description: I've been using Git for almost a year now, but I didn't really start using Git until recently when I began working for Intridea [http://www.intridea.co
+-
+  id: 22
+  title: uninitialized constant User::Authentication
+  body: |-
+    <p>I've hosted acts-as-blogr on <a href="http://www.slicehost.com">Slicehost</a> for a while now, but I recently signed up for shared hosting through <a href="http://www.dreamhost.com">Dreamhost</a>.&nbsp; They had a promotion of 2 years of hosting for $22 which I couldn't pass up now that they support <a href="http://www.modrails.com/">Passenger</a> for Rails apps.&nbsp; Anyway, I finally got around to deploying an app with Passenger and I had a little problem.</p>
+    <p>Upon doing the initial 'cap deploy:migrations', it failed with this error</p>
+    <pre name="code" class="terminal">  * executing "cd /home/brentmc79/brentmc79.com/releases/20090122070240; rake RAILS_ENV=production&nbsp; db:migrate"
+        servers: ["brentmc79.com"]
+        [brentmc79.com] executing command
+     ** [out :: brentmc79.com] (in /home/brentmc79/brentmc79.com/releases/20090122070240)
+     ** [out :: brentmc79.com] rake aborted!
+     ** [out :: brentmc79.com] uninitialized constant User::Authentication
+     ** [out :: brentmc79.com] 
+     ** [out :: brentmc79.com] (See full trace by running task with --trace)
+        command finished
+    failed: "sh -c \"cd /home/brentmc79/brentmc79.com/releases/20090122070240; rake RAILS_ENV=production&nbsp; db:migrate\"" on brentmc79.com
+    </pre>
+    <p>This was clearly something to do with <a href="http://github.com/technoweenie/restful-authentication/tree/master#INSTALL">restful_authentication</a> since it was complaining about User::Authentication.&nbsp; I did a bit of googling, but I didn't come up with much.&nbsp; Somebody mentioned renaming the plugin to not have a hyphen, but that just seemed silly.&nbsp; Someone else mentioned some session/cookie issue, but I hadn't even made it to the browser.&nbsp; It was failing on db:migrate.&nbsp; Finally, someone mentioned that they had forgotten to include the plugin in their repo.&nbsp; This got me to thinkin...</p>
+    <p>I knew that I had included the plugin, but I decided to take a look at the Github repo in the browser.&nbsp; Here's what I saw:</p>
+    <p><img src="http://img.skitch.com/20090122-pauyqhu4um2my8tn4eiyridi4y.jpg" alt="" width="518" height="308" />&nbsp;</p>
+    <p>The restful_authentication plugin was actually a cloned repo sitting inside my working copy.&nbsp; I'm sure there's probably some clever way to enable a repo inside of a repo, but it was 2am and I just wanted it to work.&nbsp; So I just rm'd the restful_authentication plugin from the vendor directory, download the tarball from <a href="http://www.github.com">Github</a>, and extracted it back into vendor/plugins.&nbsp; Using the tarball instead of the clone gives you all the code without all the git info.</p>
+    <p>I committed/pushed, then ran 'cap deploy:migrations' again and the database migrated with no uninitialized constant error. &nbsp; Viola!&nbsp; Unfortunately, then I just moved on to the next issue...</p>
+    <p>After a couple more tweaks and deploys, I finally had it up and running. </p>
+  slug: uninitialized-constant-user-authentication
+  created_at: 2009-01-22 08:18:32
+  updated_at: 2009-05-04 04:08:18
+  published: 1
+  keywords: 
+  description: I've hosted acts-as-blogr on Slicehost [http://www.slicehost.com] for a while now, but I recently signed up for shared hosting through Dreamhost [http:
+-
+  id: 23
+  title: Dead simple task scheduling in Rails
+  body: |-
+    <p>So I was working on an <a title="Intridea home page" href="http://www.intridea.com" target="_blank">Intridea</a> project where I needed to send out a daily digest email.&nbsp; The emails needed to be sent out on a scheduled interval, not as the result of some user action.&nbsp; This meant that it would need to be handled outside of the normal request/response cycle.</p>
+    <p>Typically in the Rails world, when someone mentions long-running, or background tasks, you think either <a title="BackgrounDrb homepage" href="http://backgroundrb.rubyforge.org/" target="_blank">BackgrounDrb</a> or <a title="Starling at Github" href="http://github.com/defunkt/starling/tree/master" target="_blank">Starling</a>/<a title="Workling at Github" href="http://github.com/purzelrakete/workling/tree/master" target="_blank">Workling</a>.&nbsp; Those tools are fine and all -- actually, don't get me started on BackgrounDrb -- but I wanted something a bit more simple.</p>
+    <p>I didn't need queueing, or jobs, or anything like that.&nbsp; I had only one task to manage.&nbsp; I just want something that will say, "Once a day, do [task]", and that's all.</p>
+    <p>Also, I really didn't want to have to monkey with deployment tasks, be it with Vlad or Capistrano or whatever.&nbsp; I wanted to just deploy as usual, and have it all just work, no extra processes to start or tasks to run.</p>
+    <p>This seemed like a tall order, but I began my search anyway.&nbsp; Google led me to a number of pages about a number of tools, all of which included one or more of the things I was trying to avoid.&nbsp; Of all places, I finally ended up on <a title="How To Run Background Jobs In Rails" href="http://wiki.rubyonrails.org/rails/pages/HowToRunBackgroundJobsInRails" target="_blank">this page</a> from the Ruby On Rails <a title="Ruby On Rails wiki" href="http://wiki.rubyonrails.org/rails" target="_blank">wiki</a>.</p>
+    <p>Despite having only a one line mention near the bottom of the page, I decided to check out <a title="rufus-scheduler at Github" href="http://github.com/jmettraux/rufus-scheduler/tree/master" target="_blank">rufus-scheduler</a>, and it turned out to be exactly what I was looking for.&nbsp; There was no database table, queueing mechanism, or separate process to manage.&nbsp; Just a simple scheduler to call out to your existing ruby code.</p>
+    <p>It couldn't get any simpler.&nbsp; Here's how I set it up...</p>
+    <p>First, install the gem.</p>
+    <pre name="code" class="ruby">sudo gem install rufus-scheduler</pre>
+    <p>I also froze it into vendor/gems by declaring the gem in the initializer block of environment.rb and then running rake gems:unpack. </p>
+    <p>Then I created a file called task_scheduler.rb in my config/initializers directory. &nbsp; Inside this file is where the magic happens.&nbsp; This is where it all goes down.&nbsp; Are you ready?&nbsp; Here it is...</p>
+    <pre name="code" class="ruby">scheduler = Rufus::Scheduler.start_new
+    
+    scheduler.every("1m") do
+      DailyDigest.send_digest!
+    end
+    </pre>
+    <p>Yeah, that's it.  Seriously.</p>
+    <p>I was in disbelief myself until I started up the server and watched it send me an email.&nbsp; In it's current state, it would send the digest every minute, which is not what I wanted.&nbsp; Fortunately, the rufus-scheduler provides several ways to schedule your tasks.&nbsp; Once I was ready, I changed it to more of a cron-style scheduler.</p>
+    <pre name="code" class="ruby">scheduler = Rufus::Scheduler.start_new
+    
+    # Send the digest every day at noon
+    scheduler.cron("0 12 * * *") do
+      DailyDigest.new.send_digest!
+    end
+    </pre>
+    <p>You could also use scheduler.in or scheduler.at for one time tasks set to run at some point in the future.</p>
+    <p>I know a guy who's from "the future", but that's another story.</p>
+    <p>Anyway, there you have it.&nbsp; Dead simple task scheduling in Rails.&nbsp; It really doesn't get any easier than that. </p>
+  slug: dead-simple-task-scheduling-in-rails
+  created_at: 2009-02-13 06:49:05
+  updated_at: 2009-05-04 04:07:28
+  published: 1
+  keywords: 
+  description: So I was working on an Intridea [http://www.intridea.com] project where I needed to send out a daily digest email.? The emails needed to be sent out on
+-
+  id: 24
+  title: Temporarily disable activerecord callbacks
+  body: |-
+    <p>ActiveRecord <a title="callbacks Rails doc" href="http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html" target="_blank">callbacks</a> can be super-handy, but every once in a while, they get in the way.</p>
+    <p>I was recently working on an <a title="Intridea home page" href="http://www.intridea.com" target="_blank">Intridea</a> client project and I had to create a rake task to import a large set of data from a spreadsheet.&nbsp; One of the models that was being imported had an after_save callback that sent out an email notification.&nbsp; I didn't really want 3500 emails to be sent out whenever this rake task was ran, so I needed to disable the callback while the import task was running.</p>
+    <p>A former coworker, Blake, from NT showed me this trick...</p>
+    <p>Say you've got a model like so...</p>
+    <pre name="code" class="ruby">class Thing &lt; ActiveRecord::Base
+      before_save :do_stuff
+    
+      def do_stuff
+        raise "This thing is doing stuff..."
+      end
+    end
+    </pre>
+    <p>In the config/initializers directory, I created a file called extensions.rb.&nbsp; You can call it whatever you like.&nbsp; I chose 'extensions' because I use the same file for any minor Ruby or Rails class extensions.&nbsp; In it, I put this...</p>
+    <pre name="code" class="ruby">class ActiveRecord::Base
+      def self.without_callback(callback, &amp;block)
+        method = self.send(:instance_method, callback)
+        self.send(:remove_method, callback)
+        self.send(:define_method, callback) {true}
+        yield
+        self.send(:remove_method, callback)
+        self.send(:define_method, callback, method)
+      end
+    end
+    </pre>
+    <p>What this does is it grabs the callback and stores it in the method variable.&nbsp; Remember, this code only circumvents the 'do_stuff' method, not anything declared as a before_save callback.&nbsp; It then redefines the method to merely return true, yields to the block, and then redifines the the method with the contents of the method variable.&nbsp;</p>
+    <p>Yielding to the block allows you to not have to worry about maintaining the method contents, or restoring it once you're done.&nbsp; Also, if you were so inclined, you could easily modify this code to accept an array of method names and disable all of them</p>
+    <p>Once the extension is in place, you can do this...</p>
+    <pre name="code" class="ruby">Thing.without_callback(:do_stuff) do
+      thing = Thing.new
+      thing.save
+    end
+    </pre>
+    <p>...without 'do_stuff' ever being called.</p>
+    <p>Some people will probably argue that if you need to disable your callback, then your model should be defined differently, but I say that's bullshit.&nbsp; I think this is perfectly acceptable in many cases.&nbsp; Granted you probably wouldn't want to do this all throughout your application code, but I see no problem with using this technique in a test, or data migration, or in my case, a rake task.</p>
+    <p><strong>[UPDATE]</strong></p>
+    <p>WOOT!  Now there's a plugin.  Check it out...  <a href="http://www.brentmc79.com/without_callbacks">without_callbacks</a></p>
+  slug: temporarily-disable-activerecord-callbacks
+  created_at: 2009-03-12 19:25:40
+  updated_at: 2009-05-07 21:07:39
+  published: 1
+  keywords: 
+  description: ActiveRecord callbacks [http://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html] can be super-handy, but every once in a while, they get in the 
+-
+  id: 25
+  title: form_for funkiness with ActiveResource
+  body: |-
+    <p>The combination of a running nose, scratchy throat, and this <a href="http://api.rubyonrails.org/classes/ActiveResource/Base.html">ActiveResource</a> bug made for a lovely afternoon.</p>
+    <p>The <a href="http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#M001572">form_for</a> method in ActionView::Helpers::FormHelper, when given an ActiveRecord object as an argument, uses the new_record? method to determine whether the form action should be POST or PUT.&nbsp; Well, today I was building a controller to consume a restful web service, so I was using ActiveResource instead of ActiveRecord.</p>
+    <p>Everything was hunky-dory until I began doing a little testing.</p>
+    <p>Whenever I would submit my 'new' form, it would blow up on a before_filter method.&nbsp; The odd part was that the before_filter method was declared as such...</p>
+    <pre name="code" class="ruby">before_filter :do_stuff, :except =&gt; [:new, :create]</pre>
+    <p>WTF? It should not have been calling the do_stuff method before the 'create' action.&nbsp; Well, as it turns out, it wasn't.&nbsp; A little debugging helped me realize that it was actually hitting the 'update' action.&nbsp; Again, WTF?</p>
+    <p>I checked the form_for method call.&nbsp; I checked the generated html.&nbsp; I checked the routes file.&nbsp; Everything looked kosher.&nbsp; I was stumped.</p>
+    <p>When all else fails, google that shit.</p>
+    <p>I did, and what did I find?&nbsp; <a title="Ruby on Rails - Lighthouse Ticket #1455" href="http://rails.lighthouseapp.com/projects/8994/tickets/1455-activeresource-failed-with-rails-221">This Lighthouse ticket</a> describing how form_for no worky with ActiveResource in Rails 2.2.1 (and 2.2.2 evidently since that what I was running).&nbsp; So what's the solution?</p>
+    <pre name="code" class="ruby">alias :new_record? :new?</pre>
+    <p>Add that to your resource model.&nbsp; ActiveResource defines a new? method which works exactly like ActiveRecord's new_record? method.&nbsp;</p>
+    <p>I had actually checked the new_record? method when I was debugging the issue, but for some reason no bells and whistles went off when @thing.new_record? returned nil.&nbsp; WTF Brent?&nbsp; I blame it on the medication.</p>
+  slug: form-for-funkiness-with-activeresource
+  created_at: 2009-03-17 02:04:42
+  updated_at: 2009-05-04 04:06:34
+  published: 1
+  keywords: 
+  description: The combination of a running nose, scratchy throat, and this ActiveResource [http://api.rubyonrails.org/classes/ActiveResource/Base.html] bug made for 
+-
+  id: 26
+  title: Polymorphic many-to-many associations in Rails
+  body: |-
+    <p>Setting up polymorphic associations is ridiculously easy in Rails.&nbsp; Setting up many-to-many associations in Rails is <em>also</em> ridiculously easy in Rails.&nbsp; However, setting up polymorphic many-to-many associations in Rails is more difficult, but only slightly.</p>
+    <p>Recently, on an <a href="http://www.intridea.com">Intridea</a> client project, I had one particular model that had many-to-many associations with several other models in the app.&nbsp; The thought of multiple join tables in the database didn't sit well with me, so I decided to consolidate things a bit.</p>
+    <p>Now I can't use the actual models from the app without possibly giving away the yet-to-be-launched app.&nbsp; So instead, I'll use an example that we're all familiar with, tags and taggings.</p>
+    <p>You know the drill.&nbsp; You have your common model, Tag.</p>
+    <pre name="code" class="ruby">class Tag &lt; ActiveRecord::Base
+      has_many :taggings, :dependent =&gt; :destroy
+      has_many :books, :through =&gt; :tagings, :source =&gt; :taggable, :source_type =&gt; "Book"
+      has_many :movies, :through =&gt; :tagings, :source =&gt; :taggable, :source_type =&gt; "Movie"
+    end
+    </pre>
+    <p>Your join model, Tagging.</p>
+    <pre name="code" class="ruby">class Tagging &lt; ActiveRecord::Base
+      belongs_to :taggable, :polymorphic =&gt; true
+      belongs_to :tag
+    end
+    </pre>
+    <p>And your taggable models, Book and Movie.</p>
+    <pre name="code" class="ruby">class Book &lt; ActiveRecord::Base
+      has_many :taggings, :as =&gt; :taggable
+      has_many :tags, :through =&gt; :taggings
+    end
+    
+    class Movie &lt; ActiveRecord::Base
+      has_many :taggings, :as =&gt; :taggable
+      has_many :tags, :through =&gt; :taggings
+    end
+    </pre>
+    <p>Everything in Tagging, Movie, and Book is pretty much your standard setup.&nbsp; This gives you all the normal associations.&nbsp; You've got tag.taggings, book.tags, movie.tags, and tag.taggable.</p>
+    <p>It gets a little trickier when you want to find all movies (or books) associated with a tag.&nbsp; There are a number of ways that this can be done.&nbsp; You could use some crazy joined finder call on Movie, or find all Taggings with a particular taggable type (or a named scope) and collect the movies, or do it like up above.</p>
+    <pre name="code" class="ruby">has_many :movies, :through =&gt; :tagings, 
+                      :source =&gt; :taggable, 
+                      :source_type =&gt; "Movie"
+    </pre>
+    <p>This association allows us to access a movies with a particular tag directly from the tag object itself.&nbsp; It's just your typical <em>has_many</em> association, but with a few more options.&nbsp; The <em>:through</em> option says that movies can be accessed through our join model, tagging.&nbsp; Rails normally would expect there to be a movies association on tagging, but the <em>:source</em> option tells Rails to examine the taggable association instead.&nbsp; Similarly, the <em>:source_type</em> option specifies the class (or type) of the polymorphic association that we trying to retrieve.</p>
+    <p>So remember when you want bidirectional class-specific many-to-many polymorphic associations, :source and :source_type are your friend.</p>
+  slug: polymorphic-many-to-many-associations-in-rails
+  created_at: 2009-04-12 17:38:26
+  updated_at: 2009-05-04 04:05:23
+  published: 1
+  keywords: 
+  description: Setting up polymorphic associations is ridiculously easy in Rails.? Setting up many-to-many associations in Rails is also ridiculously easy in Rails.? 
+-
+  id: 27
+  title: Archive links, quick and easy
+  body: |-
+    <p>So I finally got around to replacing the dummy text in the sidebar with real, working archive links, and it was stupidly easy.&nbsp; Check it out...</p>
+    <p>First, I added a helper method to take all published posts and group them by the month they were created.</p>
+    <pre name="code" class="ruby">def archives
+      @archives = Post.published.in_order.all.group_by { |t| t.created_at.beginning_of_month}
+    end
+    </pre>
+    <p>Then I used that helper method to display links for each month in which posts were created.</p>
+    <pre name="code" class="ruby"><ul>
+      &lt;% archives.each do |month, posts| %&gt;
+        <li>&lt;%= link_to(month.strftime('%B')+" (#{posts.size})", archive_path(:month =&gt; month.month, :year =&gt; month.year)) %&gt;</li>
+      &lt;% end %&gt;
+    </ul>
+    </pre>
+    <p>You probably noticed the <em>archive_path</em> named route that the links point to.  Here's how I set it up.</p>
+    <pre name="code" class="ruby">map.archive '/posts/:year/:month', :controller =&gt; 'posts', :action =&gt; 'archive'
+    </pre>
+    <p>That route points to the archive action of the posts controller which merely retrieves the posts created within the specified month and renders the list view.</p>
+    <pre name="code" class="ruby">def archive
+      @posts = Post.published.in_order.from_month(Time.parse "#{params[:month]}/#{params[:year]}").paginate(:page =&gt; params[:page], :per_page =&gt; 5)
+      render :action =&gt; 'index'
+    end
+    </pre>
+    <p>The archive action uses a <em>from_month</em> named scope on the Post model to restrict the find to all posts created within a given month.</p>
+    <pre name="code" class="ruby">named_scope :from_month, lambda { |month| {:conditions =&gt; {:created_at =&gt; month..(month + 1.month)}} }
+    </pre>
+    <p>That's it.  That's all it takes to set up simple archive links for your blog.</p>
+  slug: archive-links-quick-and-easy
+  created_at: 2009-04-14 05:07:04
+  updated_at: 2009-05-04 14:14:18
+  published: 1
+  keywords: 
+  description: |-
+    So I finally got around to replacing the dummy text in the sidebar with real, working archive links, and it was stupidly easy.? Check it out...
+    
+    
+    
+    Fir
+-
+  id: 28
+  title: Making Subversion less painful with git-svn
+  body: |-
+    <p>Today I began helping out on an <a href="http://www.intridea.com" target="_blank">Intridea</a> project that (by the client's request) uses Subversion as their revision control system instead of Git.&nbsp; Initially I was a bit dismayed.&nbsp; Hell, I actually felt a little sick to my stomach.&nbsp; Git has treated me very well over the past year, and I hadn't touched a Subversion repo in even longer.</p>
+    <p>Git-svn had crossed my mind, but it wasn't until a coworker suggested it that I decided to give it a try.</p>
+    <p>The first thing was to get it installed.&nbsp; I followed <a href="http://blog.emmanuelbernard.com/2009/01/how-to-install-git-and-git-svn-on-mac.html" target="_blank">this tutorial</a> and only had to make one small change.&nbsp; Adding <em><em>/opt/local/libexex/git-core</em></em> to my path didn't work.&nbsp; I did a quick whereis to find out that my git-svn executable is in the <em>/usr/local/git/libexec/git-core/</em> directory.&nbsp; I updated my path and everything was kosher.</p>
+    <p>Now to set up the repo.&nbsp; Most of the tutorials that I found covered setting up a new svn repo with git-svn like <a href="http://git.or.cz/course/svn.html" target="_blank">this one</a>, but in my case, the svn repo had been around for quite some time.&nbsp; Being the wannabe-know-it-all that I am, I decided to just go ahead an clone the svn repo, like so:</p>
+    <pre class="terminal">git-svn clone http://path-to-the-svn-repo<br /></pre>
+    <p>After about ten minutes of watching the clone chug away, I thought something was up.&nbsp; Well, it turns out that if you don't include the proper options, the clone will pull down all branches, tags, whatever.&nbsp; I didn't want, or need all of that.&nbsp; All I wanted was trunk.&nbsp; After a brief glance at the git-svn docs, I tried again with the <em>--trunk</em> flag.</p>
+    <pre class="terminal">git-svn clone --trunk http://path-to-the-svn-repo<br /></pre>
+    <p>Aparently, the <em>-s</em> option also works.&nbsp; It tells git-svn that you svn is in the standard layout with trunk, branches, tags, and whatnot.</p>
+    <p>This time it ran for only five minutes before I asked myself wtf was going on.&nbsp; I realized that it was pulling down every single revision, which I really didn't need.&nbsp; I would've stopped it and tried again with the --revision (-r) flag which allows you to specify a revision number, or range of revision number, but the clone was already at rev 900 out of 1100, so&nbsp; I just let it ride.</p>
+    <p>Once that was done, I was good to go.&nbsp; I could pretty much just treat it as a regular Git repo until I was ready to push any changes back to the svn repo.&nbsp; I used <a href="http://www.viget.com/extend/effectively-using-git-with-subversion/" target="_blank">this tutorial</a> by <a href="http://www.viget.com/about/team/cnixon" target="_blank">Clinton Nixon</a>, who I had recently seen do a talk on Scala at the <a href="http://developer-day.com/events/2009-durham.html" target="_blank">Developer Day</a> in Durham, to help guide my general git-svn workflow.</p>
+  slug: making-subversion-less-painful-with-git-svn
+  created_at: 2009-04-21 05:44:57
+  updated_at: 2009-04-28 16:03:24
+  published: 1
+  keywords: git,git-svn,svn,subversion
+  description: How to use Git with an existing Subversion repository via git-svn.
+-
+  id: 29
+  title: Git checkout woes [updated]
+  body: |-
+    <p>I ran into a strange issue while attempting to checkout a remote tracking branch of an Intridea project earlier today, so I thought I'd post up my work around.</p>
+    <p>I ran my normal checkout command, like so...</p>
+    <pre class="terminal">brent:~/Intridea/earthaid[master]$ git checkout -b prod origin/prod<br /></pre>
+    <p>which resulted in this error message</p>
+    <pre class="terminal">fatal: git checkout: updating paths is incompatible with switching branches.<br />Did you intend to checkout 'origin/prod' which can not be resolved as commit</pre>
+    <p>After a bit of googling, I'm still not sure of the cause as most of the search results were related to issues around deploying tags, and I was merely attempting a checkout.&nbsp; What I did find out was that I could specify the start point of my new branch by the revision/commit sha instead of the remote branch name, like so...</p>
+    <pre class="terminal">brent:~/Intridea/earthaid[master]$ git branch prod 02314583a99abdc276cde968c20babbadd23<br />brent:~/Intridea/earthaid[master]$ gc prod<br />Switched to branch "prod"<br />brent:~/Intridea/earthaid[prod]$<br /></pre>
+    <p>Once I had applied my changes, I just had to make sure to push them to the proper branch.</p>
+    <p>[update]</p>
+    <p><img src="http://s3.amazonaws.com/brentmc79-prod/files/6/original.jpg?1241620873" alt="farside_cartoon.jpg" width="320" height="231" /></p>
+    <p>Ok, I'm a retard.&nbsp; About a minute or two after I typed up this post, it occurred to me that Git couldn't resolve the remote branch name because I hadn't pulled first.&nbsp; Yeah, that's right.&nbsp; All I need to do was pull and then everything worked properly.</p>
+  slug: git-checkout-woes-updated
+  created_at: 2009-05-06 14:44:45
+  updated_at: 2009-05-06 14:49:42
+  published: 1
+  keywords: git, fatal error, pull, updating paths
+  description: Attempting to create a Git branch resulted in "updating paths is incompatible" error message.  The solution, pull first.  Doh!
+-
+  id: 30
+  title: hookers, nuts, and ActiveRecord callbacks
+  body: |-
+    <p><img src="http://s3.amazonaws.com/brentmc79-prod/files/7/original.jpg?1241728881" alt="feat-shamwow.jpg" width="487" height="409" /></p>
+    <p>Remember my post from a few weeks back about temporarily <a href="../temporarily-disable-activerecord-callbacks" target="_blank">disabling ActiveRecord callbacks</a>?&nbsp; Well, I decided to extend the functionality a bit and wrap it all up in a plugin.</p>
+    <p>You can now specify one or more callbacks to disable, or specify nothing and disable all callbacks by default.</p>
+    <p>You can check out the <a href="../../without_callbacks" target="_blank">project page</a> or jump over to the <a href="http://github.com/brentmc79/without_callbacks/tree/master" target="_blank">Github repo</a>.</p>
+  slug: hookers-nuts-and-activerecord-callbacks
+  created_at: 2009-05-07 20:43:44
+  updated_at: 2009-05-07 20:44:36
+  published: 1
+  keywords: activerecord, plugin, callback, disable, nuts, hookers
+  description: I bundled up the ActiveRecord disabling code into plugin.  Check it out...
+-
+  id: 31
+  title: properly using the flash
+  body: |-
+    <p><img style="float: left; margin: 5px;" src="http://s3.amazonaws.com/brentmc79-prod/files/8/medium.jpg?1244596649" alt="Are those pants made of mirrors, because I can see myself in them..." width="193" height="300" /></p>
+    <p>No, I'm not going to tell you how to seduce the comic book superhero with an evening of dinner, cocktails, and smooth talk while demonstrating impeccable manners and etiquette.</p>
+    <p>What I am going to tell you is how to correctly use the handy Rails tool for passing objects between actions.&nbsp; Now, this is no huge secret or stunningly clever trick.&nbsp; In fact, you probably already know what I'm about to tell you.&nbsp; It's just one of those things that I never think to do until after it's a problem.</p>
+    <p>In the typical Rails app, there a snippet/partial/whatever that displays anything from the flash hash with either :notice or :error keys.&nbsp; If, in your controller action, you set flash[:notice] equal to some message and then redirect to another action, that message will persist through the redirect and get displayed on the subsequent view.</p>
+    <p>Here's the problem.&nbsp; If, in your action, you just render a view template instead of redirecting, then the user will see that message like you intended but it will also still remain on the following request which may or may not be confusing.&nbsp; Fortunately, there's an easy way to avoid this.</p>
+    <p>If you know you'll be redirecting, then there's nothing to worry about.&nbsp; Business as usual.&nbsp; But if you're not redirecting, just rendering a view, then you can use flash.now[:key].&nbsp; The 'now' method only maintains the flash contents through the current request and is cleared before the next action.&nbsp; Check it out.</p>
+    <pre name="code" class="ruby">def create
+    &nbsp; @thing = Thing.new(params[:thing])
+    &nbsp; if @thing.save
+    &nbsp;&nbsp;&nbsp; flash[:notice] = "Oh snap!&nbsp; You created a thing!"
+    &nbsp;&nbsp;&nbsp; redirect_to @thing
+    &nbsp; else
+    &nbsp;&nbsp;&nbsp; flash.now[:error] = "Damn dog, you messed up"
+    &nbsp;&nbsp;&nbsp; render :action =&gt; :new
+    &nbsp; end
+    end</pre>
+    <p>Notice how when the thing save without errors we use flash[] and redirect, but when there are errors we use flash.now[] and there's no redirect.&nbsp; This will keep your app users from seeing any strance, out of place errors.</p>
+    <p>So that's it.&nbsp; Like I said, it's nothing monumental.&nbsp; As you were...</p>
+  slug: properly-using-the-flash
+  created_at: 2009-06-10 02:10:42
+  updated_at: 2009-06-10 02:13:41
+  published: 1
+  keywords: ruby, rails, flash, action, error, notice, controller, redirect
+  description: How to keep flash messages in your Rails app from persisting to subsequent actions.
+-
+  id: 32
+  title: I decided to "role" my own...  get it?
+  body: |-
+    <p>I had some spare time the other day, which doesn't happen often, so I thought I'd take advantage of it by building something useful rather than tenderizing my brain via social media like I usually do.</p>
+    <p>After hearing numerous complaints recently about shitty role/authorization implementations, I thought I'd take a stab at it, so I whipped up role_fu.&nbsp; It's a rails plugin that simplifies the process of setting up role access rules for controller actions.</p>
+    <p>Check out the <a title="role_fu project page" href="../../../role_fu" target="_self">project page</a> or the <a title="role_fu github repo" href="http://github.com/brentmc79/role_fu/tree/master" target="_blank">readme</a> for more details.</p>
+    <p>If you've got any feedback, do me a favor and leave a comment on the project page, or just shoot me an email brentmc79(@)gmail(dot)com.</p>
+  slug: new_plugin_role_fu
+  created_at: 2009-07-26 19:55:22
+  updated_at: 2009-07-26 20:19:36
+  published: 1
+  keywords: ruby, rails, plugin, role, role_fu, activerecord, actioncontroller
+  description: Role_fu - my rails plugin for action/role authorization
+-
+  id: 33
+  title: iPhone hack day at Viget Labs
+  body: |-
+    <p><a href="http://s3.amazonaws.com/brentmc79-prod/files/10/original.jpg?1250189401"><img style="margin:0px 0px 5px 5px" src="http://s3.amazonaws.com/brentmc79-prod/files/10/medium.jpg?1250189401" alt="photo.jpg" width="300" height="225" align="right" /></a>I recently spent a day hanging out with a few of the guys at <a title="Viget Labs homepage" href="http://www.viget.com" target="_blank">Viget Labs</a> hacking on the iPhone.&nbsp; <a title="Ben Scofield's professional blog" href="http://benscofield.com/" target="_blank">Ben Scofield</a>, the Technology Director at Viget Labs, was leading an iPhone development primer for a few of Viget's finest, and they were nice enough to let a handful of "outsiders" join the fun.</p>
+    <p>My iPhone development experience at that point was very minimal.&nbsp; I had done a few online tutorials and walk-throughs, but nowhere near enough to really understand what I was doing.&nbsp; On top of that, my Objective-C knowledge was pretty much non-existant.&nbsp; Fortunately, none of this was a problem.</p>
+    <p>We spent the first half of the day going over the basics.&nbsp; Ben walked us through Xcode and Interface Builder, and we talked about basic project layout, the different types of iPhone apps (list, view, and navigation-based, etc).</p>
+    <p>We then broke off into small groups, pairs mostly, to do a little hacking.&nbsp; <a title="David's professional blog" href="http://davideisinger.com/">David Eisinger </a>and myself put our heads together on something amazing.&nbsp; The Text-EmBIGiner, we called it (or something like that).&nbsp; Picture this, a text field, a button, and a label.&nbsp; You enter your text, hit the buttom, and BAM -- the label is updated with your text.&nbsp; Fucking amazing.&nbsp; We thought so at least.&nbsp; Many high-fives were had.</p>
+    <p>Lunch was provided in the form of <a href="http://www.amantepizza.com/">Amante Pizza</a>.&nbsp; Thanks Viget!</p>
+    <p>In the afternoon we moved on to talk about ways of makin iPhone development less painful.&nbsp; In other words, removing the Objective-C.&nbsp; We briefly talked about <a href="http://rhomobile.com/home">Rhomobile</a>, an open source framwork for building cross-platform mobile apps.</p>
+    <p>The remainder of the day was spent talking about and playing with two other frameworks, Appcelerator's <a href="http://www.appcelerator.com/products/titanium-mobile/" target="_blank">Titanium</a> and the open source <a href="http://phonegap.com" target="_blank">PhoneGap</a>.&nbsp; Both frameworks allow you to build your app using primarily HTML and javascript, but they still give you access to the iPhone native controls and features.&nbsp; They were very cool and I could definitely see myself playing with these more in the future.</p>
+    <p>Overall it was a really fun day, and I'm looking forward to putting my new knowledge to good use.</p>
+    <p>Thanks again Viget!</p>
+  slug: iphone-hack-day-at-viget-labs
+  created_at: 2009-08-13 21:27:25
+  updated_at: 2009-08-13 21:30:40
+  published: 1
+  keywords: iphone sdk apple hack appstore titanium rhodes appcelerator viget labs objective-c
+  description: My follow-up on the iPhone Hack Day at Viget Labs
+-
+  id: 34
+  title: Now in mobile format...
+  body: |-
+    <p><img style="float: left;" src="http://s3.amazonaws.com/brentmc79-prod/files/12/medium.png?1250352229" alt="Picture_6.png" width="280" height="300" /></p>
+    <p>Out of sheer boredom last night, I decided to whip up a mobile view for my blog.</p>
+    <p>It was extremely easy thanks to the <a title="Mobile-fu github page" href="http://github.com/brendanlim/mobile-fu/tree/master" target="_blank">mobile-fu</a> plugin by my friend <a title="Brendan's blog" href="http://brendanlim.com/" target="_blank">Brendan</a>.&nbsp; I also found a few tips and tricks from <a title="Jun 19 Tutorial: Building a website for the iPhone" href="http://www.engageinteractive.co.uk/blog/2008/06/19/tutorial-building-a-website-for-the-iphone/" target="_blank">this post</a> on the Engage Interactive blog such as how to handle orientation changes and how to specify an image for home screen bookmarks.</p>
+    <p>I did most of my testing via the iPhone Simulator from the SDK and also a <a title="Fluid App-specific browser" href="http://fluidapp.com/" target="_blank">Fluid</a> browser which allows you to specify mobile safari as the user agent, giving you the proper look, and you can use Safari's built-in Firebug-like tools.</p>
+    <p>If you've got an iPhone, give it a look...</p>
+  slug: now-in-mobile-format
+  created_at: 2009-08-15 19:51:19
+  updated_at: 2009-08-15 20:01:38
+  published: 1
+  keywords: iphone mobile rails mobile-fu ruby layout
+  description: I recently updated my blog with a mobile view formatted for the iPhone.  Here's how...
+-
+  id: 35
+  title: Really Diggin' the New Heroku
+  body: <p><a title="The Heroku homepage" href="http://heroku.com" target="_blank"><img style="float: right;padding:7px" src="http://s3.amazonaws.com/brentmc79-prod/files/14/original.png?1255560014" alt="Picture_4.png" width="208" height="74" /></a>I first began playing around with <a title="The Heroku homepage" href="http://heroku.com" target="_blank">Heroku</a> nearly 2 years ago, when the were still in private beta.&nbsp; I used it to host a couple of simple little apps that I was playing around with.</p>
+  slug: heroku-still-rocks
+  created_at: 2009-10-15 13:39:04
+  updated_at: 2009-10-15 13:39:04
+  published: 0
+  keywords: 
+  description: [img:http://s3.amazonaws.com/brentmc79-prod/files/14/original.png?1255560014] [http://heroku.com]I first began playing around with Heroku [http://herok
+-
+  id: 36
+  title: Access Your Passenger App From Windows
+  body: |-
+    <p>Eww, Windows?</p>
+    <p>Yeah, I said it.&nbsp; As we all know, there's a million and one schmucks out there still rockin' Internet Explorer as their default browser.&nbsp; That means if you want that spreadsheet-in-the-cloud app you've been working on to hit critical mass, you better test it in IE.</p>
+    <p>If you're like me, then you've recently started running some or all of your apps locally via <a title="The Passenger Homepage" href="http://www.modrails.com/" target="_blank">Passenger</a>.&nbsp; This can cause a bit of a problem when it comes time to test in IE.&nbsp; At least, it did for me anyway.</p>
+    <p>I use <a title="Parallels Desktop for Mac" href="http://www.parallels.com/products/desktop/" target="_blank">Parallels</a> for my Windows testing, and an old version at that.&nbsp; From what I hear, <a title="VMWare Fusion - Mac Desktop Virtualization" href="http://www.vmware.com/products/fusion/" target="_blank">VMWare</a> is better, but I'm too cheap to buy it and I just don't really care that much.&nbsp; Prior to using Passenger locally, I would just point IE at my mac's IP address, port 3000, and everything was kosher.&nbsp; Well, with Passenger, that no worky.</p>
+    <p>Now, I'm sure there's probably a way to configure Parallels to allow me to test a Passenger app, but from what I can tell that either requires an updated version of Parallels or more time Googling than I'm willing to spend.</p>
+    <p>I knew that I could access my local Apach instance from any machine on my home network, so I figured there's got to be a way to hit my Passenger apps since they're running under that same Apach instance.&nbsp; With a little help from a fellow <a title="Dave's Intridea profile" href="http://www.intridea.com/about/people/naffis" target="_blank">Intridean</a>, I got it working.</p>
+    <p>Here's what you do:</p>
+    <p>1. Set your app up in Passenger, like you normally would.&nbsp; I use the pref pane.</p>
+    <p><a title="Passenger Pref Pane" href="http://s3.amazonaws.com/brentmc79-prod/files/17/original.png?1256675869"><img style="margin-top: 5px; margin-bottom: 5px;" src="http://s3.amazonaws.com/brentmc79-prod/files/17/medium.png?1256675869" alt="passengerpane.png" width="300" height="223" /></a></p>
+    <p>2. Determine you mac's IP address.&nbsp; An easy way is to look in the sharing section of the System Preferences.</p>
+    <p><a title="Sharing Pref Pane" href="http://s3.amazonaws.com/brentmc79-prod/files/18/original.png?1256676029"><img style="margin-top: 5px; margin-bottom: 5px;" src="http://s3.amazonaws.com/brentmc79-prod/files/18/medium.png?1256676029" alt="sharingprefpane.png" width="300" height="247" /></a></p>
+    <p>3. On your Windows machine, add an entry to the hosts file with your mac's IP address and the app's domain (local) domain name.&nbsp; The host file is in C:\WINDOWS\system32\drivers\etc.</p>
+    <p><a title="Windows Host File" href="http://s3.amazonaws.com/brentmc79-prod/files/19/original.png?1256676196"><img style="margin-top: 5px; margin-bottom: 5px;" src="http://s3.amazonaws.com/brentmc79-prod/files/19/medium.png?1256676196" alt="hostsfile.png" width="300" height="196" /></a></p>
+    <p>That's it!&nbsp; Point IE at http://yourapp.local and you should be golden.&nbsp; This will work for subdomains also, assuming you've added the *.yourapp.local alias to you Passenger conf.</p>
+  slug: access-your-passenger-app-from-windows
+  created_at: 2009-10-27 20:59:36
+  updated_at: 2009-10-27 21:03:24
+  published: 1
+  keywords: rails, passenger, mod_rails, windows, internet explorer
+  description: How to test your Rails app running on Passenger from Internet Explorer and Windows.  It's not as hard as you might think...
+-
+  id: 37
+  title: IE7's Accept Header And Rails respond_to Bug
+  body: |-
+    <p>Earlier this afternoon, I was debugging an ajax call that consistently resulted in an error, but only in IE.&nbsp; Checking the log file, I found this:</p>
+    <pre class="terminal">Processing ApplicationController#index (for 192.168.1.108 at 2009-10-27 14:37:03) [GET]<br />  Session ID: ddde16cf83baca85a81e9fb0772c2844<br />  Parameters: {"format"=&gt;"js", "page"=&gt;"1"}<br /><br /><br />ActionController::MethodNotAllowed (Only get, head, post, put, and delete requests are allowed.):<br />    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:65:in `recognize_path'<br />    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'<br />    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:154:in `handle_request'<br />    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'<br />    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'<br />    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'<br />    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'<br />    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/railz/request_handler.rb:50:in `process_request'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/utils.rb:183:in `safe_fork'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server.rb:352:in `__send__'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server.rb:163:in `start'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server.rb:352:in `__send__'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'<br />    /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/bin/passenger-spawn-server:61<br /><br />Rendering /Users/brent/Intridea/project/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (method_not_allowed)</pre>
+    <p>WTF?&nbsp; That told me a whole lotta nothing.</p>
+    <p>First of all, it was blowing up before it even got into the application code, which was was strange because it worked just fine in Firefox, Safari, etc.&nbsp; Second, I checked the response body and it was returning html.&nbsp; Html?&nbsp; The format is clearly specified as "js" in the request parameters.&nbsp; Double-checking the controller code, there was definitely a respond_to block with format.js, so why was it returning html?</p>
+    <p>I showed this to one of my coworkers and he asked if I had tried switching the format calls in the respond_to block.&nbsp; There were two, one for html and one for javascript.&nbsp; I switched them up, and put the format.js first.&nbsp; I reloaded the page, and what do you know, it worked!&nbsp; No error.&nbsp; Again, wtf?&nbsp; He told me that this same bug had kicked his ass on a previous project.</p>
+    <p>Aparently, IE7 isn't specific about what sort of response it expects in the accept header.&nbsp; This causes Rails to merely return the first format that it comes to.&nbsp; In my case, the html.</p>
+    <p>So if you're not seeing the format that you're expecting when testing with IE7, try reordering the format calls in the respond_to block.</p>
+  slug: ie7-accept-header-and-rails-respon-to-bug
+  created_at: 2009-10-28 01:26:06
+  updated_at: 2009-10-28 01:26:30
+  published: 1
+  keywords: rails, respond_to, ie, ie7, format, bug
+  description: IE7 doesn't explicitly specify what format it expects in the accept header.  This causes Rails to render the first format in the respond_to block.  
+-
+  id: 38
+  title: Geoip_city gem install on Snow Leopard
+  body: |-
+    <p>I had recently upgraded my MacBook Pro to OS X 10.6 Snow Leopard, and I was in the process of reinstalling most of the ruby gems.&nbsp; The geoip_city gem was the only one that gave me a bit of trouble, so I figured I'd post how I got it working.</p>
+    <ol>
+    <li>Go <a title="Maxmind GeoIP source download" href="http://geolite.maxmind.com/download/geoip/api/c/" target="_blank">here</a> and download the latest source for the GeoIP C api</li>
+    <li>Untar the source, cd into the directory</li>
+    <li>Run <code>./configure</code></li>
+    <li>Then run <code>make &amp;&amp; sudo make install</code></li>
+    <li>Finally, run <code>sudo env ARCHFLAGS="-arch x86_64" gem install geoip_city -- --with-geoip-dir=/opt/GeoIP</code></li>
+    </ol>
+    <p>The key is the <code>ARCHFLAGS</code> parameter in the last step.&nbsp; This indicates the native extensions are to be built for a 64 bit architecture.</p>
+    <p>Also, if you need the free GeoIP City Lite database, you can find it <a title="GeoIP City Lite database download link" href="http://www.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz">here</a>.&nbsp; I hope this helps.</p>
+  slug: geoip-city-gem-on-snow-leopard
+  created_at: 2009-12-28 19:14:47
+  updated_at: 2009-12-28 19:15:07
+  published: 1
+  keywords: snow leopard, osx, geoip, geoip-city, gem, install, ruby, 10.6
+  description: A quick walk-through of how to install the geoip_city gem on OS X Snow Leopard 10.6.
+-
+  id: 39
+  title: Getting set up on Snow Leopard
+  body: |-
+    <p><img style="float: right;" src="http://s3.amazonaws.com/brentmc79-prod/files/20/medium.jpg?1263797142" alt="snow_leopard.jpg" width="300" height="280" />Ok, I'm about to walk you through the steps that I followed to get my development environment set up on Snow Leopard.<br /><br />You might be wondering why I'd post this after posting about setting up geoip on Snow Leopard.&nbsp; Well, you're in luck becuase I'm gonna tell you...</p>
+    <p>I had originally installed 10.6&nbsp; via the upgrade option in hopes that it would ease the pain of installing a new OS, and it did to some degree.&nbsp; I didn't have to reinstall every single app, and in general I was back up and running fairly quickly.</p>
+    <p>But here's the problem -- It wasn't any faster or more responsive than when it was running old 32-bit version of the OS.&nbsp; It may have felt slightly snappier, but overall it was still slow.&nbsp; I mean, not Windows slow, but it just wasn't what I, as a mac-user, was used to.</p>
+  slug: getting-my-dev-environment-set-up-on-snow-leopard
+  created_at: 2010-01-18 06:55:02
+  updated_at: 2010-01-19 12:32:21
+  published: 0
+  keywords: ruby, rails, git, mysql, osx, snow, leopard
+  description: How to get a ruby on rails dev environment set up after a clean install of OSX 10.6 Snow Leopard
+-
+  id: 40
+  title: Snow Leopard Rails Dev Setup Guides
+  body: <p>You can never have too many.<br /><br />Much like every new version of OSX, there have been a plethora of "How to install BLANK on Snow Leopard" blog posts and walk-throughs detailing all the little tips and tricks around how to install some tool or piece of software.&nbsp; Having a lot of options is awesome, but in the words of the great Biggie Smalls, "mo' blog posts, mo' problems".<br /><br />That IS how it went, right?<br /><br />Anyway, with all of these walk-throughs, how do you know which ones are good, and which one just suck.&nbsp; Well, you don't really...<br /><br />So here's a list of a few [confirmed] valid and useful dev setup walk-throughs:<br /><br /><br />First, this is actually a series of posts, as opposed to one single write-up.&nbsp; Actually, its not even a series of posts.&nbsp; Its just the search results for 'Snow Leopard' on the <a title="Hive Logic website" href="http://hivelogic.com/" target="_blank">Hive Logic</a> site.&nbsp; So really, its only the first 3-5 posts that matter.<br /><br /><a title="Snow Leopard search results on HiveLogic.com" href="http://hivelogic.com/search/results/a7a831b978f2667fa301ea095d3d8fa7" target="_blank">http://hivelogic.com/search/results/a7a831b978f2667fa301ea095d3d8fa7</a><br /><br />This is the route that I personally followed after a fresh install of Snow Leopard, and I had everything up and running in no time.<br /><br /><br />Next, <a title="RobbyOnRails.com" href="http://robbyonrails.com/" target="_blank">Robby On Rails</a> did a thorough and entertaining post on Snow Leopard Rails dev env setup, or SLRDESU for short.&nbsp; Acronyms make everything better (AMEB).&nbsp; I don't know about you, but Robby's older post about getting setup with Passenger came in handy for me on more than one occasion.<br /><br /><a title="The Robby On Rails walk-through" href="http://www.robbyonrails.com/articles/2010/02/08/installing-ruby-on-rails-passenger-postgresql-mysql-oh-my-zsh-on-snow-leopard-fourth-edition" target="_blank">http://www.robbyonrails.com/articles/2010/02/08/installing-ruby-on-rails-passenger-postgresql-mysql-oh-my-zsh-on-snow-leopard-fourth-edition</a><br /><br />His latest post covers everything from start to finish, and he even included a few video to pass the time while waiting for binaries to build and whatnot.&nbsp; I haven't personally used this walk-through, but based on my previous experience with Robby's posts, and the recommendation from coworkers, I'm sure it'll get you where you need to be.<br /><br /><br />Another noteworthy mention comes from the guys over at <a title="Thoughbot website" href="http://thoughtbot.com/" target="_blank">Thoughtbot</a>, the makers of such wonderful tools as Shoulda, Paperclip, and Factory Girl.&nbsp; Their robot-laden guide goes beyond just Rails/dev-related stuff, and covers the likes of several generally useful OSX tools.&nbsp; Things like Quicksilver, Fluid, and Firefox/Firebug.<br /><br /><a title="Thoughbot walk-through" href="http://robots.thoughtbot.com/post/159805668/2009-rubyists-guide-to-a-mac-os-x-development" target="_blank">http://robots.thoughtbot.com/post/159805668/2009-rubyists-guide-to-a-mac-os-x-development</a><br /><br />This is another one that I haven't personally used, but I think we can trust the guys over at Thoughtbot.&nbsp; After all, their company reputation depends on it!<br /><br /><br />So there you have it.&nbsp; Three different hand-holding recipes for getting you set up on Snow Leopard.&nbsp; If you haven't upgraded yet, what're you waiting for?&nbsp; Get to it!</p>
+  slug: osx-rails-dev-setup-walk-throughs
+  created_at: 2010-03-05 02:36:39
+  updated_at: 2010-03-05 02:36:39
+  published: 1
+  keywords: osx, snow leopard, ruby, rails, mysql, git, upgrade, development, guide
+  description: Ready to upgrade to Show Leopard?  Dreading the hassle of reinstalling and configuring your dev environment?  Here's three step-by-step guides that will help get you back up and coding in no time.
+-
+  id: 41
+  title: Raise the roof and stay dry
+  body: |-
+    <p>Recently, I was playing around with a little OAuth consumer app that I had thrown together.&nbsp; Everything was all fine and dandy until suddenly I began seeing those damned "Something went wrong" Rails error pages.&nbsp; You know what I'm talking about...</p>
+    <p><img src="http://s3.amazonaws.com/brentmc79-prod/files/21/large.png?1271826996" alt="Screen_shot_2010-04-21_at_1.15.52_AM.png" width="400" height="89" /></p>
+    <p>Well, as it turns out, the problem was the sketchy OAuth provider api.&nbsp; It was down/unresponsive/whatever.&nbsp; Shame on me for not writing robust enough code to blow up gracefully.</p>
+    <p>What's a girl to do?&nbsp; I'm not sure about her, but what I did was come up with a dry little way to not see that stupid red apology again.</p>
+    <p>All of my OAuth crap was in the same controller, and whenever the <a title="oauth master @ github" href="http://github.com/pelle/oauth" target="_blank">oauth</a> gem choked on the sketchy api I just wanted it to redirect back to the referrer.&nbsp; So here's what I did...</p>
+    <pre name="code" class="ruby">def raises_exception?
+      begin
+        yield
+      rescue =&gt; ex
+        Rails.logger.info("Exception occurred (#{ex.class.to_s}): #{ex.message}")
+        flash[:error] = "There was a problem completing your request.&nbsp; Please try again later."
+        redirect_to request.referrer
+        return true
+      end
+      return false
+    end
+    </pre>
+    <p>And then anywhere in my controller that I was calling an oauth method that might spawn a request (and bomb), I did this...</p>
+    <pre name="code" class="ruby">return if raises_exception? do
+      # call out to the sketchy api
+    end
+    </pre>
+    <p>So in the <code>raises_exception?</code> method, it yields to block of code inside a rescue block.&nbsp; If an exception occurs, its rescued, logged, and then the request is redirected back to the referrer.</p>
+    <p>One thing to take note of -- you have to prepend the <code>raises_exception?</code> call with <code>return if</code>.&nbsp; Otherwise, the code in that action will continue to execute, and I'm pretty sure you wouldn't want that.</p>
+    <p>There you have it, just a little sumthin-sumthin...</p>
+  slug: raise-the-roof-and-stay-dry
+  created_at: 2010-04-21 05:42:20
+  updated_at: 2010-04-21 05:46:42
+  published: 1
+  keywords: ruby, rails, yield, block, oauth, exception, rescue
+  description: My DRY means of protecting a simple little Rails app from 500 errors when consuming a sketchy, unreliable api...
+-
+  id: 42
+  title: Intridea Post: Alias Your Mom...
+  body: |-
+    <p>Check out my <a href="http://intridea.com/2010/9/28/alias-your-mom-and-4-other-productivity-tips">latest post</a> on the Intridea blog:</p>
+    <p><img src="http://grab.by/grabs/9fd2def7e50786a68f7f47535edd2677.png"/></p>
+  slug: intridea-post-alias-your-mom
+  created_at: 2010-09-28 15:21:02
+  updated_at: 2010-09-28 15:21:02
+  published: 1
+  keywords: intridea, blog, productivity, alias
+  description: Check out my lastest post on the Intridea blog: Alias Your Mom And 4 Other Productivity Tips
+...

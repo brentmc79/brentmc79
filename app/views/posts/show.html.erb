@@ -1,0 +1,5 @@
+<% content_for :header do %>
+  <meta name="description" content="<%= @post.meta_description %>">
+  <meta name="keywords" content="<%= @post.meta_keywords %>">
+<% end %>
+<%= render @post %>

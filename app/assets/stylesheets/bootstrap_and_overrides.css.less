@@ -1,0 +1,155 @@
+@import "twitter/bootstrap/bootstrap";
+body { 
+	padding-top: 60px;
+}
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not 
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: '/assets/fontawesome-webfont.eot';
+@fontAwesomeWoffPath: '/assets/fontawesome-webfont.woff';
+@fontAwesomeTtfPath: '/assets/fontawesome-webfont.ttf';
+@fontAwesomeSvgPath: '/assets/fontawesome-webfont.svg';
+
+// Font Awesome
+@import "fontawesome";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+body {
+  padding-top: 30px;
+}
+
+.hero-unit {
+  padding: 40px;
+}
+
+.hero-unit h1 {
+  margin-top: 12px;
+}
+
+.hero-unit a#slider {
+  float: left;
+  margin-right: 15px;
+  height: 102px;
+  width: 102px;
+  position: relative;
+  border-radius: 52px;
+  border: 4px solid #FFF;
+  box-shadow: 2px 2px 2px #AAA;
+}
+
+#slider img {
+  position: absolute;
+  z-index: 1;
+  height: 102px;
+  width: 102px;
+  margin-right: 15px;
+  border-radius: 52px;
+}
+
+#slider img.active {
+  z-index:3;
+}
+
+.hero-unit a.headshot {
+  float: left;
+  margin-right: 15px;
+}
+
+.hero-unit img {
+  border-radius: 52px;
+}
+
+.hero-unit h1 a {
+  color: #333;
+}
+
+.hero-unit h1 a:hover {
+  text-decoration: none;
+}
+
+.sidebar-nav {
+  margin-top: -190px;
+}
+
+.sidebar-nav input.search-query {
+  width: 154px;
+  margin-right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.sidebar-nav #search-submit {
+  margin-left: -5px;
+  border-radius: 0 10px 10px 0;
+}
+
+.sidebar-nav h4 {
+  margin: 20px 0 10px 0;
+}
+
+.sidebar-nav ul.long {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.pagination a.disabled {
+  color: #888;
+  cursor: pointer;
+}
+
+article {
+  margin-top: 50px;
+}
+
+article:first-child {
+  margin-top: 0px;
+}
+
+article img {
+  margin: 10px 20px;
+  padding: 10px;
+  box-shadow: 3px 3px 3px #AAA;
+}
+
+article header h1 {
+  margin-bottom: 10px;
+}
+
+article a.comment-count {
+  float: right;
+  color: #AAA;
+  font-weight: 600;
+  font-size: 18px;
+  border: 2px solid #DDD;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  margin-top: -6px;
+}
+
+article a.comment-count:hover {
+  text-decoration: none;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}

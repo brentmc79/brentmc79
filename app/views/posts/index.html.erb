@@ -1,0 +1,2 @@
+<%= render @posts %>
+<%= will_paginate @posts, :next_label => "Older", :previous_label => "Newer", :class => "greybox", :id => "pagination", :renderer => CustomLinkRenderer %>
