@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/bootstrap-responsive.css" rel="stylesheet">
     <title><%= content_for?(:title) ? yield(:title) : "Brentmc79" %></title>
     <%= csrf_meta_tags %>
 
@@ -77,34 +78,42 @@
     <div class="container">
       <div class="content">
         <div class="row">
-           <div class="span7 offset1">
-              <%= yield %>
+          <div class="visible-phone">
+            <%= render :partial => "searches/form" %>
+            <div class="alert alert-info alert-block">
+              <!--<p>I'm <span class="label label-info">Brent Collier</span>.</p>-->
+              <p>I'm <strong>Brent Collier</strong>.</p>
+              <p>I work on the <a href="http://twitter.com/safety">Trust & Safety</a> team at <a href="http://twitter.com">Twitter</a>, building internal tools with Ruby, Scala, and a smattering of other tech.</p>
             </div>
-            <div class="span3">
-              <div class="well sidebar-nav">
-                <%= render :partial => "searches/form" %>
-                <div class="alert alert-info alert-block">
-                  <!--<p>I'm <span class="label label-info">Brent Collier</span>.</p>-->
-                  <p>I'm <strong>Brent Collier</strong>.</p>
-                  <p>I work on the <a href="http://twitter.com/safety">Trust & Safety</a> team at <a href="http://twitter.com">Twitter</a>, building internal tools with Ruby, Scala, and a smattering of other tech.</p>
-                </div>
-                <h4>Other Posts</h4>
-                <ul id="previous-posts" class="nav nav-list long">
-                  <% other_posts.each do |post| %>
-                    <li><%= link_to post.title, post %></li>
-                  <% end %>
-                </ul>
-                <h4>Categories</h4>
-                <ul class="nav nav-list long">
-                  <% tag_links.each do |tag_link| %>
-                    <li><%= link_to "#{tag_link[:tag].name} (#{tag_link[:count]})", posts_path(:tag => tag_link[:tag].name) %></li>
-                  <% end %>
-                </ul>
-                <div style="float:none;clear:both"></div>
-              </div><!--/.well -->
-              <a class="twitter-timeline" href="https://twitter.com/brentmc79" data-widget-id="260175251927867393">Tweets by @brentmc79</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div><!--/span-->
+          </div>
+          <div class="span7 offset1">
+            <%= yield %>
+          </div>
+          <div class="hidden-phone span3">
+            <div class="well sidebar-nav">
+              <%= render :partial => "searches/form" %>
+              <div class="alert alert-info alert-block">
+                <!--<p>I'm <span class="label label-info">Brent Collier</span>.</p>-->
+                <p>I'm <strong>Brent Collier</strong>.</p>
+                <p>I work on the <a href="http://twitter.com/safety">Trust & Safety</a> team at <a href="http://twitter.com">Twitter</a>, building internal tools with Ruby, Scala, and a smattering of other tech.</p>
+              </div>
+              <h4>Other Posts</h4>
+              <ul id="previous-posts" class="nav nav-list long">
+                <% other_posts.each do |post| %>
+                  <li><%= link_to post.title, post %></li>
+                <% end %>
+              </ul>
+              <h4>Categories</h4>
+              <ul class="nav nav-list long">
+                <% tag_links.each do |tag_link| %>
+                  <li><%= link_to "#{tag_link[:tag].name} (#{tag_link[:count]})", posts_path(:tag => tag_link[:tag].name) %></li>
+                <% end %>
+              </ul>
+              <div style="float:none;clear:both"></div>
+            </div><!--/.well -->
+            <a class="twitter-timeline" href="https://twitter.com/brentmc79" data-widget-id="260175251927867393">Tweets by @brentmc79</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div><!--/span-->
         </div><!--/row-->
       </div><!--/content-->
 
