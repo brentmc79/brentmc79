@@ -1,8 +1,6 @@
 Brentmc79::Application.routes.draw do
 
-  get "searches/create"
-
-  get "searches/show"
+  match 'search/:query' => 'searches#show', :as => :short_search
 
   match 'logout' => 'sessions#destroy', :as => :logout
   match 'login' => 'sessions#new', :as => :login

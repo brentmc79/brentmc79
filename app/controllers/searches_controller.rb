@@ -3,7 +3,7 @@ class SearchesController < ApplicationController
   def create
     @search = Search.new(params[:search])
     if @search.valid?
-      redirect_to searches_show_path(:query => @search.query)
+      redirect_to short_search_path(:query => @search.query)
     else
       render :action => 'show'
     end
