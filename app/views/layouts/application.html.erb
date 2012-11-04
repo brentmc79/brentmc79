@@ -83,11 +83,12 @@
             <div class="span3">
               <div class="well sidebar-nav">
                 <form class="form-search">
+                <%= form_for search do |f| %>
                   <div class="input-append">
-                    <input type="text" class="span2 search-query">
+                    <%= f.text_field :query, :class => "span2 search-query" %>
                     <button id="search-submit" type="submit" class="btn">Search</button>
                   </div>
-                </form>
+                <% end %>
                 <div class="alert alert-info alert-block">
                   <!--<p>I'm <span class="label label-info">Brent Collier</span>.</p>-->
                   <p>I'm <strong>Brent Collier</strong>.</p>

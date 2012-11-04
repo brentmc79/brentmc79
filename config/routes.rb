@@ -10,6 +10,7 @@ Brentmc79::Application.routes.draw do
   end
 
   resources :posts, :only => [:index, :show]
+  resources :searches, :only => [:create, :show]
 
   root :to => "posts#index"
 
