@@ -1,6 +1,6 @@
 <% if !search.query.blank? %>
   <div class="alert alert-success">
-    <%= pluralize(search.results.total_pages, "result") %> found for "<span id="search-term"><%= search.query %></span>"
+    <%= pluralize(search.results.total_entries, "result") %> found for "<span id="search-term"><%= search.query %></span>"
   </div>
   <%= render search.results %>
   <%= will_paginate search.results, :next_label => "Older", :previous_label => "Newer", :class => "greybox", :id => "pagination", :renderer => CustomLinkRenderer %>
