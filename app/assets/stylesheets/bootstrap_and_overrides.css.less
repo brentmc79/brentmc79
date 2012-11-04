@@ -36,16 +36,23 @@ body {
 }
 
 .hero-unit {
+  text-align: center;
   padding: 40px;
 }
 
-.hero-unit h1 {
+.hero-unit h1.visible-phone {
   margin-top: 12px;
+  font-size: 30px;
+}
+
+.hero-unit h1.hidden-phone {
+  margin-top: 12px;
+  font-size: 60px;
 }
 
 .hero-unit a#slider {
   float: left;
-  margin-right: 15px;
+  margin: inherit auto;
   height: 102px;
   width: 102px;
   position: relative;
@@ -94,8 +101,13 @@ input.search-query {
   border-radius: 10px 0 0 10px;
 }
 
+.visible-phone input, .visible-phone button {
+  margin-bottom: 15px;
+}
+
 .visible-phone input.search-query {
-  width: 144px;
+  margin-left: 35px;
+  width: 150px;
 }
 
 #search-submit {

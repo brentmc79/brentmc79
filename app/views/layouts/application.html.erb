@@ -69,7 +69,8 @@
             <%= image_tag("biopics/photo-6.png") %>
           </a>
           <% link_to image_tag("biopics/photo-1.png", :style => "display:inline-block"), root_path, :class => "headshot" %>
-          <h1><%= link_to "@brentmc79", root_path %></h1>
+          <h1 class="hidden-phone"><%= link_to "@brentmc79", root_path %></h1>
+          <h1 class="visible-phone"><%= link_to "@brentmc79", root_path %></h1>
           <p>Full-time web developer. Part-time smart ass.</p>
         </div>
       </div>
