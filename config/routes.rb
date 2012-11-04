@@ -1,5 +1,9 @@
 Brentmc79::Application.routes.draw do
 
+  get "searches/create"
+
+  get "searches/show"
+
   match 'logout' => 'sessions#destroy', :as => :logout
   match 'login' => 'sessions#new', :as => :login
 

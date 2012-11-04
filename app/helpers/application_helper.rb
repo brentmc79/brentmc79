@@ -12,8 +12,13 @@ module ApplicationHelper
 
   def other_posts
     return @other_posts unless @other_posts.nil?
-    visible_posts = (@posts || [@post]).map(&:id)
-    @other_Posts = Post.where("\"posts\".\"id\" NOT IN (?)",visible_posts).order("created_at desc").all
+    visible_posts = @posts || [@post]
+    if visible_posts.any?
+      visible_posts = visible_posts.map(&:id)
+      @other_posts = Post.where("\"posts\".\"id\" NOT IN (?)",visible_posts).order("created_at desc").all
+    else
+      @other_posts = Post.order("created_at desc").all
+    end
   end
 
   def search

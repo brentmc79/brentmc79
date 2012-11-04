@@ -1,0 +1,6 @@
+<%= form_for Search.new, :class => 'form-search' do |f| %>
+  <div class="input-append">
+    <%= f.text_field :query, :class => "span2 search-query" %>
+    <button id="search-submit" type="submit" class="btn">Search</button>
+  </div>
+<% end %>
