@@ -7,3 +7,10 @@ $(document).ready () ->
     $(this).addClass "btn-danger"
   .on "mouseout", () ->
     $(this).removeClass "btn-danger"
+
+  if $("form#new_post").length > 0
+    slug = $("input#post_slug")
+    $("input#post_title")
+    .focus()
+    .on "keyup", () ->
+      slug.val($(this).val().trim().replace(/[^a-zA-Z0-9]+/g,"-"))
