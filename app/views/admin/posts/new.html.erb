@@ -1,0 +1,42 @@
+<%= form_for [:admin, @post], :html => {:class => 'form-horizontal'} do |f| %>
+  <div class="control-group">
+    <%= f.label :published, :class => "control-label" %>
+    <div class="controls">
+      <%= f.check_box :published %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :title, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :title, :class => "input-block-level" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :slug, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :slug, :class => "input-block-level" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :meta_description, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :meta_description, :class => "input-block-level" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :meta_keywords, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :meta_keywords, :class => "input-block-level" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :body_source, "Body", :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_area :body_source, :class => "input-block-level" %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Save changes</button>
+    <button type="button" class="btn">Cancel</button>
+  </div>
+<% end %>

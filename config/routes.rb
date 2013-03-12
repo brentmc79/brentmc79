@@ -8,6 +8,7 @@ Brentmc79::Application.routes.draw do
   resources :sessions
 
   namespace :admin do
+    match "/" => "base#index"
     resources :posts
   end
 
